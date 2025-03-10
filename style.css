@@ -1,25 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --primary-font: "Fira Sans";
+    --secondary-font: "Roboto";
+
+    --primary-bg-color: #8ED8BF;
+    --secondary-bg-color: #605858;
+
+    --primary-button-color: #353131;
+    --button-hover: #181717;
+
+    --primary-text-color: #F4F3F1;
+    --secondary-text-color: #605858;
+
+    
+    --text-color: var(--secondary-text-color);
+    
+}
+
+/* General Styles */
+body {
+    font-family: var(--primary-font);
+    background: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.receipt-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height */
+}
+
+.receipt-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    width: 50px;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Receipt Box */
+.receipt-box {
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%;
+    max-width: 340px;
+}
+
+.receipt-logo {
+    margin-top: 32px;
+    width: 50px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.order-number {
+    margin-top: -16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.order-list {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.order-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    position: relative;
+    padding: 8px ;
+}
+
+.order-list li::before {
+    content: "...............................";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--secondary-text-color);
+    opacity: 0.5; /* Adjust opacity if needed */
+}
+
+.order-list li span:first-child {
+    background: var(--receipt-bg);
+    padding-right: 5px;
+    z-index: 1;
+}
+
+.order-list li span:last-child {
+    background: var(--receipt-bg);
+    padding-left: 5px;
+    z-index: 1;
+}
 
 
-/* ---------- Startsidan 3s Index.html ---------- */
+.order-list small {
+    display: block;
+    font-size: 12px;
+    color: var(--text-color);
+    text-align: left;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: -10px;
+    opacity: 0.5;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D1D1D1;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    
+    
+}
+
+.total-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.total-left small {
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--secondary-text-color);
+    margin-top: 3px;
+    display: block;
+}
+
+.total-right {
+    text-align: right;
+    white-space: nowrap; /* Ensures "101 SEK" stays on the same line */
+}
+
+
+/* Button */
+.receipt-btn {
+    display: block;
+    background: var(--primary-button-color);
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 316px;
+}
+
+.receipt-btn:hover {
+    background: var(--button-hover);
+}
+
+
+/*-------------About us-----------------*/
+.about-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height */
+    justify-content: space-between;
+}
+
+
+.about-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    width: 50px;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* About Box */
+.about-box {
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    width: 90%; /* Make it more compact */
+    max-width: 320px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 
 
-/* ---------- Meny Index.html ---------- */
+.about-logo {
+    margin-top: 20px;
+    width: 50px;
+}
 
 
+.about-text {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+    text-align: justify;
+    line-height: 1.5;
+    padding: 10px; /* Adds space inside the content box */
+}
+.about-btn {
+    display: block;
+    background: var(--primary-button-color);
+    color: white;
+    padding: 15px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 316px;
+}
 
-/* ---------- Kundvagn my_order.html ---------- */
-
-
-
-/* ---------- Bekrätrelse eta.html ---------- */
-
-
-
-/* ---------- Kvittor receipt.html ---------- */
-
-
-
-/* ---------- About us about_us.html ---------- */
-
-
+.about-btn:hover {
+    background: var(--button-hover);
+}
