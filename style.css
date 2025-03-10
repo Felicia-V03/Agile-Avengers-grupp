@@ -1,92 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 :root {
     --primary-font: "Fira Sans";
     --secondary-font: "Roboto";
-
     --primary-bg-color: #8ED8BF;
     --secondary-bg-color: #605858;
 
     --primary-button-color: #353131;
-    --button-hover: #181717;
-
     --primary-text-color: #F4F3F1;
     --secondary-text-color: #605858;
 
-    
-    --text-color: var(--secondary-text-color);
-    
 }
-
-/* General Styles */
-body {
-    font-family: var(--primary-font);
-    background: white;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-}
-
-.receipt-container {
-    background: var(--secondary-bg-color);
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* Ensures full height */
-}
-
-.receipt-header {
-    width: 100%;
-    text-align: left;
-}
-
-.header-logo {
-    margin-top: 10px;
-    width: 50px;
-    margin: 10px;
-    padding: 5px;
-    border: 2px solid white;
-    border-radius: 5px;
-}
-
-/* Receipt Box */
-.receipt-box {
-    background: white;
-    border-radius: 2px;
-    text-align: center;
-    width: 100%;
-    max-width: 340px;
-}
-
-
-.receipt-logo {
-    margin-top: 32px;
-    width: 50px;
-}
-
-h1 {
-    margin-top: 0;
-    font-size: 20px;
-    color: var(--text-color);
-    letter-spacing: 1px;
-}
-
-
 
 * {
     box-sizing: border-box;
@@ -98,6 +22,275 @@ h1 {
     display: none;
 }
 
+/* ---------- Startsidan 3s Index.html ---------- */
+.strandad-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-bg-color);
+    background-image: url(./assets/leaves-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo-image {
+    width: 10rem;
+    height: auto;
+}
+
+/* ---------- Meny Our_menu.html ---------- */
+.menu-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu-container {
+    background-color: var(--secondary-bg-color);
+    border-radius: 0.5rem;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--primary-font);
+    padding: 1.5rem 1rem;
+    border-bottom: 2px dotted var(--primary-button-color);
+}
+
+.menu-head article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-container h1 {
+    align-self: flex-start;
+    font-size: 2rem;
+}
+
+.cart {
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    position: relative;;
+
+}
+
+.menu-container img {
+    aspect-ratio: 1/1;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--primary-text-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.antal-siffan {
+    position: absolute;
+    top: -1rem;
+    right: -0.9rem;
+    background-color: red;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 2rem;
+    height: auto;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+}
+
+.menu-nav_items {
+    background-color: var(--primary-button-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    font-family: var(--primary-font);
+}
+
+.menu-body {
+    width: 100%;
+
+}
+
+.menu-items_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 2px dotted var(--primary-button-color);
+
+}
+
+.menu-text {
+    justify-self: flex-end;
+    width: 80%;
+    font-family: var(--primary-font);
+}
+
+.plus-btn {
+    aspect-ratio: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    font-size: 2rem;
+    border: none;
+}
+
+.first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.sub-title {
+    font-size: 0.6em;
+}
+
+
+/* ---------- Kundvagn my_order.html ---------- */
+.header-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    img {
+        width: 3rem;
+    }
+}
+.my-icon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+
+
+}
+
+.fa-arrow-left, .fa-cart-shopping {
+    color: var(--primary-button-color);
+    font-size: 1.25rem;
+}
+
+.header-title {
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    color: var(--primary-button-color);
+    text-align: center;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    width: 100%;
+}
+.order-list {
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    width: 100%;
+}
+.order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-button-color);
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--secondary-font);
+    width: 100%;
+}
+
+.order-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-text-color);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    width: 100%;
+    background-color: var(--primary-button-color);
+    text-decoration: none;
+}
+
+
+/* ---------- Bekrätrelse eta.html ---------- */
 .wrapper-eta {
     background-color: var(--secondary-bg-color);
     width: 100%;
@@ -180,14 +373,61 @@ h1 {
     border: solid 2px var(--primary-text-color);
     border-radius: 4px;
     height: 5rem;
+}
 
+/* ---------- Kvittor receipt.html ---------- */
+.receipt-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 100vh; /* Ensures full height */
+    padding: 1.5rem;
+}
+
+.receipt-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Receipt Box */
+.receipt-box {
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.receipt-logo {
+    margin-top: 32px;
+    width: 50px;
+}
+
+.receipt-title {
+    font-family: var(--primary-font);
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--primary-button-color);
+    letter-spacing: 1px;
 }
 
 .order-number {
-    margin-top: -16px;
+    font-family: var(--primary-font);
     font-size: 12px;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--primary-button-color);
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -205,7 +445,7 @@ h1 {
     justify-content: space-between;
     font-size: 16px;
     font-weight: bold;
-    color: var(--secondary-text-color);
+    color: var(--primary-button-color);
     position: relative;
     padding: 8px ;
 }
@@ -239,12 +479,11 @@ h1 {
 .order-list small {
     display: block;
     font-size: 12px;
-    color: var(--text-color);
+    color: var(--primary-button-color);
     text-align: left;
     margin-left: 10px;
     font-weight: bold;
     margin-top: -10px;
-    opacity: 0.5;
 }
 
 .total {
@@ -255,9 +494,9 @@ h1 {
     padding: 10px 10px;
     font-size: 16px;
     font-weight: bold;
-    color: var(--secondary-text-color);
-    
-    
+    color: var(--primary-button-color);
+    font-family: var(--primary-font);
+
 }
 
 .total-left {
@@ -270,7 +509,7 @@ h1 {
 .total-left small {
     font-size: 12px;
     font-weight: normal;
-    color: var(--secondary-text-color);
+    color: var(--primary-button-color);
     margin-top: 3px;
     display: block;
 }
@@ -280,34 +519,23 @@ h1 {
     white-space: nowrap; /* Ensures "101 SEK" stays on the same line */
 }
 
-
 /* Button */
 .receipt-btn {
-    display: block;
-    background: var(--primary-button-color);
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-weight: bold;
     text-align: center;
     width: 100%;
-    max-width: 316px;
+  
 }
 
 .receipt-btn:hover {
     background: var(--button-hover);
 }
 
-
-/*-------------About us-----------------*/
+/* ---------- About us about_us.html ---------- */
 .about-container {
     background: var(--secondary-bg-color);
     width: 100%;
-    max-width: 360px;
     text-align: center;
-    padding: 10px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +552,6 @@ h1 {
 .header-logo {
     margin-top: 10px;
     width: 50px;
-    margin: 10px;
     padding: 5px;
     border: 2px solid white;
     border-radius: 5px;
@@ -332,22 +559,24 @@ h1 {
 
 /* About Box */
 .about-box {
+    font-family: var(--primary-font);
     background: white;
     border-radius: 2px;
     text-align: center;
-    width: 90%; /* Make it more compact */
-    max-width: 320px;
+    width: 100%; /* Make it more compact */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .about-logo {
     margin-top: 20px;
     width: 50px;
 }
 
+.about-title {
+    color: var(--primary-button-color);
+    margin-top: 1rem;
+}
 
 .about-text {
     font-size: 16px;
@@ -358,109 +587,10 @@ h1 {
 }
 .about-btn {
     display: block;
-    background: var(--primary-button-color);
-    color: white;
-    padding: 15px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
     width: 100%;
-    max-width: 316px;
 }
 
 .about-btn:hover {
     background: var(--button-hover);
 }
 
-
-/*-------------Min order-----------------*/
-.header-logo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-   
-    img {
-        width: 3rem;
-    }
-}
-.my-icon {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 1rem;
-    
-    
-}
-
-.fa-arrow-left, .fa-cart-shopping {
-    color: var(--primary-button-color);
-    font-size: 1.25rem;
-}
-
-.header-title {
-    font-family: var(--primary-font);
-    font-size: 1.25rem;
-    color: var(--primary-button-color);
-    text-align: center;
-}
-
-.order-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--primary-button-color);
-    font-family: var(--secondary-font); 
-    font-size: 1rem;
-    width: 100%;
-}
-.order-list {
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--primary-button-color);
-    font-family: var(--secondary-font); 
-    font-size: 1rem;
-    width: 100%;
-}
-.order-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem;
-    border-bottom: 1px solid var(--primary-button-color);
-}
-
-.order-summary {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--primary-button-color);
-    font-family: var(--secondary-font); 
-    width: 100%;
-}
-
-.order-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--primary-text-color);
-    font-family: var(--secondary-font); 
-    font-size: 1rem;
-    width: 100%;
-    background-color: var(--primary-button-color);
-    text-decoration: none;
-}
