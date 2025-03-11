@@ -4,7 +4,7 @@ import { openAndCloseNav } from "../modules/navMenu.js";
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
 if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
     console.log('Index.html');
-
+    time();
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
 } else if(window.location.pathname === '/Our_menu.html') {
@@ -28,4 +28,10 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 } else if(window.location.pathname === '/receipt.html') {
     console.log('receipt.html');
 
+}
+
+function time() {
+    setTimeout(function() {
+        window.location.href = "Our_menu.html";
+    }, 3000);
 }

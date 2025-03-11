@@ -1,3 +1,3 @@
 export const oData = {
-    allMenu : [],
+    totalMenu : [],
 }
