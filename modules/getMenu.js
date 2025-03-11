@@ -13,6 +13,7 @@ export async function getMenu() {
         const menuInfo = allMenu.map(menu => ({
           Name: menu.name,
           Ingredients: menu.ingredients,
+          Description: menu.description,
           Price: menu.price,
           Type: menu.type,
         }));
@@ -54,8 +55,8 @@ function createMenu(menu) {
     ingredientsBox.classList.add('second-row');
 
     const ingredients = createElement('p');
-    if (menu.Ingredients && menu.Ingredients.length > 0) {
-        ingredients.textContent = `${menu.Ingredients}`;
+    if (menu.Description && menu.Description.length > 0) {
+        ingredients.textContent = `${menu.Description}`;
     } else {
         ingredients.textContent = '';
     }
