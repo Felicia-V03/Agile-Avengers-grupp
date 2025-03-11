@@ -1,6 +1,5 @@
 import { getMenu } from "../modules/getMenu.js"
-
-
+import { openAndCloseNav } from "../modules/navMenu.js";
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
 if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
@@ -11,6 +10,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 } else if(window.location.pathname === '/Our_menu.html') {
     console.log('Our_menu.html');
     getMenu();
+    openAndCloseNav();
 
 //Till favorites sidan då visa favoritfilmer samt function för att söka
 } else if(window.location.pathname === '/About_us.html') {

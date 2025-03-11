@@ -197,6 +197,57 @@
     font-size: 0.6em;
 }
 
+/* Navigationsmeny */
+
+.navigation-meny {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem;
+    background: var(--secondary-bg-color);
+    opacity: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%); /* Gömmer menyn utanför skärmen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.show-menu {
+    transform: translateY(0);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+
+.nav-links a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 32px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    padding: 2rem;
+    cursor: pointer;
+    border-bottom: solid var(--primary-text-color) 1px;
+}
+
+.close-nav {
+    position: absolute;
+    top: 2.5rem; 
+    right: 1rem; 
+    width: 3rem;
+    height: 3rem;
+}
+
 
 /* ---------- Kundvagn my_order.html ---------- */
 .header-logo {
