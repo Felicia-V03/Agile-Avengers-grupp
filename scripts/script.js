@@ -1,5 +1,5 @@
 import { getMenu } from "../modules/getMenu.js"
-import { openAndCloseNav } from "../modules/navMenu.js";
+import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn} from "../modules/button.js"
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
@@ -11,7 +11,10 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 } else if(window.location.pathname === '/our-menu.html') {
     console.log('our-menu.htm');
     getMenu();
-    openAndCloseNav();
+    openAndCloseNav();  
+    dropDownStatus();
+   
+
 
 //Till about us sidan visa information om våran app
 } else if(window.location.pathname === '/about-us.html') {

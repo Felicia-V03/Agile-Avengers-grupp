@@ -13,3 +13,18 @@ export async function fetchMenu() {
 
     oData.totalMenu = data.items;
 }
+
+export async function fetchMenuByType() {
+    // Hämta JSON-data från API:et
+    const response = await fetch('https://santosnr6.github.io/Data/yumyumproducts.json');
+
+    // Kolla om vi fick ett OK-svar
+    if (!response.ok) {
+      throw new Error('Något gick fel när data skulle hämtas.');
+    }
+
+    const data = await response.json();
+
+    oData.menuType = data.items.type;
+}
+
