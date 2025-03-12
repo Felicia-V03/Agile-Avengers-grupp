@@ -9,7 +9,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
 } else if(window.location.pathname === '/our-menu.html') {
-    console.log('our-menu.htm');
+    console.log('our-menu.html');
     getMenu();
     openAndCloseNav();  
     dropDownStatus();
@@ -29,6 +29,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 } else if(window.location.pathname === '/my-order.html') {
     console.log('my-order.html');
     moneyBtn();
+    returnBtn();
 
 //Till kvittor sidan visa upp odersnummer och information
 } else if(window.location.pathname === '/receipt.html') {
