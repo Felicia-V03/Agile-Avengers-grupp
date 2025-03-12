@@ -119,7 +119,7 @@
     border-radius: 0.5rem;
 }
 
-.antal-siffan {
+.antal-siffran {
     position: absolute;
     top: -1rem;
     right: -0.9rem;
@@ -251,7 +251,7 @@
 /* ---------- Kundvagn my_order.html ---------- */
 .wrapper-order {
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
