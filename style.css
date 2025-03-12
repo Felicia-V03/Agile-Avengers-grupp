@@ -303,6 +303,10 @@
     border-bottom: 1px solid var(--primary-button-color);
 }
 
+.price {
+    font-family: var(--primary-font);
+}
+
 .order-summary {
     display: flex;
     flex-direction: column;
