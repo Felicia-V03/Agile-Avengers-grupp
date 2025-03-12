@@ -1,5 +1,6 @@
 import { oData } from "../data/data.js";
 import { fetchMenu } from "../modules/api.js";
+import { addToCart } from "../components/getcart.js"
 import { getElement, createElement } from "../utils/domUtils.js";
 
 export async function getMenu() {
@@ -55,6 +56,7 @@ function createMenu(menu) {
     const btn = createElement('button');
     btn.classList.add('plus-btn');
     btn.textContent = ("+");
+    addToCart(menu, btn);
 
     const menuText = createElement('article');
     menuText.classList.add('menu-text');
