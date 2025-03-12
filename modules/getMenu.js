@@ -1,5 +1,5 @@
 import { oData } from "../data/data.js";
-import { fetchMenu } from "../modules/api.js";
+import { fetchMenu, fetchMenuByType } from "../modules/api.js";
 import { getElement, createElement } from "../utils/domUtils.js";
 
 export async function getMenu() {
