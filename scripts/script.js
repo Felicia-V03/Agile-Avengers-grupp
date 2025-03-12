@@ -1,4 +1,5 @@
 import { getMenu } from "../components/getMenu.js"
+import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn} from "../modules/button.js"
 
@@ -28,6 +29,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 //Till order sidan visa upp odersnummer och information
 } else if(window.location.pathname === '/my-order.html') {
     console.log('my-order.html');
+    getCart();
     moneyBtn();
     returnBtn();
 
