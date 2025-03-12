@@ -108,24 +108,37 @@
 
 export function getCart() {
     document.addEventListener('DOMContentLoaded', async () => {
-        const inCart = JSON.parse(localStorage.getItem('cart')) || [];
+        // const inCart = JSON.parse(localStorage.getItem('cart')) || [];
         
+        // if (inCart.length === 0) {
+        //     const p = document.createElement('p');
+        //     p.textContent = 'No items added yet';
+        //     const orderContainer = document.querySelector('.order-container');
+        //     orderContainer.appendChild(p);
+        // } else {
+        //     inCart.forEach(menu => {
+        //         orderCard(menu);
+        //     });
+        //     const total = totalSum();
+        //     const orderSummary = document.createElement('h2');
+        //     orderSummary.classList.add('order-summary');
+        //     orderSummary.textContent = `Total: ${total} SEK`;
+        //     const orderContainer = document.querySelector('.order-container');
+        //     orderContainer.appendChild(orderSummary);
+        // }
+        const inCart = JSON.parse(localStorage.getItem('cart')) || [];
+
         if (inCart.length === 0) {
-            const p = document.createElement('p');
-            p.textContent = 'No items added yet';
-            const orderContainer = document.querySelector('.order-container');
-            orderContainer.appendChild(p);
+          const p = document.createElement('p');
+          p.textContent = 'No items added yet';
+          const orderContainer = getElement('.order-container');
+          orderContainer.appendChild(p);
         } else {
-            inCart.forEach(menu => {
-                orderCard(menu);
-            });
-            const total = totalSum();
-            const orderSummary = document.createElement('h2');
-            orderSummary.classList.add('order-summary');
-            orderSummary.textContent = `Total: ${total} SEK`;
-            const orderContainer = document.querySelector('.order-container');
-            orderContainer.appendChild(orderSummary);
+          inCart.forEach(menu => {
+              orderCard(menu);
+          });
         }
+        totalSum()
     });
 }
 
@@ -143,28 +156,30 @@ function orderCard(menu) {
     price.textContent = `Pris: ${itemTotal} SEK`;
     price.classList.add('price');
 
-    const removeBtn = document.createElement('button');
-    removeBtn.textContent = "Ta bort";
-    removeBtn.classList.add('remove-btn');
-    removeBtn.addEventListener('click', () => removeFromCart(menu, listItem));
+  const quantityContainer = document.createElement('div');
+    quantityContainer.classList.add('quantity-container');
+
+    const decreaseBtn = document.createElement('button');
+    decreaseBtn.textContent = "▲";
+    decreaseBtn.classList.add('quantity-btn');
+
+    const quantityText = document.createElement('p');
+    quantityText.textContent = menu.Antal;
+    quantityText.classList.add('quantity-text');
+
+    const increaseBtn = document.createElement('button');
+    increaseBtn.textContent = "▼";
+    increaseBtn.classList.add('quantity-btn');
+
+    quantityContainer.appendChild(decreaseBtn);
+    quantityContainer.appendChild(quantityText);
+    quantityContainer.appendChild(increaseBtn);
 
     listItem.appendChild(title);
     listItem.appendChild(price);
-    listItem.appendChild(removeBtn);
+    listItem.appendChild(quantityContainer);
 
     orderList.appendChild(listItem);
-}
-
-function removeFromCart(menu, listItem) {
-    let inCart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    inCart = inCart.filter(cartItem => cartItem.Name !== menu.Name);
-    
-    localStorage.setItem('cart', JSON.stringify(inCart));
-    
-    listItem.remove();
-    
-    console.log('Uppdaterad kundvagn:', inCart);
 }
 
 export function addToCart(menu, btn) {
@@ -208,9 +223,12 @@ export function totalSum() {
 
         console.log('Total Price for all items:', totalPrice);
 
-        return {
-            totalPrice: totalPrice,
-        };
+        const orderSummary = document.querySelector('.order-summary');
+        if (orderSummary) {
+            orderSummary.textContent = `Total: ${totalPrice} SEK`;
+        }
+
+        return totalPrice;
     } else {
         console.log('Varukorgen är tom');
         return {
