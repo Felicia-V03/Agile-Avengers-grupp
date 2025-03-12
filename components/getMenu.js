@@ -216,25 +216,15 @@ function dipButton() {
     });
 }
 
-function cartAntal() {
+export function cartAntal() {
     const inCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = inCart.reduce((total, item) => total + item.Antal, 0);
 
-    let totalAntal = 0;
-
-    inCart.forEach(menu => {
-        totalAntal += menu.Antal;
-    });
-
-    const cartIcon = getElement('.cart');
-
-    const existingAntal = cartIcon.querySelector('.antal-siffran');
-    if (existingAntal) {
-        cartIcon.removeChild(existingAntal);
+    const cartIcon = document.querySelector('.cart');
+    if (cartIcon) {
+        const antal = document.createElement('p');
+        antal.classList.add('antal-siffran');
+        antal.textContent = totalItems;
+        cartIcon.appendChild(antal);
     }
-
-    const antal = document.createElement('p');
-    antal.classList.add('antal-siffran');
-    antal.textContent = `${totalAntal}`;
-
-    cartIcon.appendChild(antal);
 }
