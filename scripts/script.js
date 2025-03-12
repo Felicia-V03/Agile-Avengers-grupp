@@ -1,4 +1,4 @@
-import { getMenu } from "../modules/getMenu.js"
+import { getMenu } from "../components/getMenu.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn} from "../modules/button.js"
 
@@ -13,8 +13,6 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
     getMenu();
     openAndCloseNav();  
     dropDownStatus();
-   
-
 
 //Till about us sidan visa information om våran app
 } else if(window.location.pathname === '/about-us.html') {

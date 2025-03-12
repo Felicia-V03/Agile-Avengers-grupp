@@ -51,8 +51,8 @@
     align-items: center;
     padding: 1.5rem;
     width: 100vw;
-    height: auto;
-}
+    min-height: 100vh;
+    height: auto;}
 
 .menu-header {
     display: flex;
