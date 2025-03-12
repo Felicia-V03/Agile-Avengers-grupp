@@ -4,10 +4,17 @@ export async function returnBtn() {
 
     // Selecting the explore menu button
     const exploreButton = document.querySelector(".return-btn");
+    const backArrow = document.querySelector('.my-icon')
 
     if (exploreButton) {
         exploreButton.addEventListener("click", () => {
             window.location.href = "our-menu.html"; // Redirect to menu page
+        });
+    }
+
+    if (backArrow) {
+        backArrow.addEventListener("click", () => {
+            window.location.href = "our-menu.html";
         });
     }
 
