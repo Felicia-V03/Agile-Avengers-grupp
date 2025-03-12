@@ -37,6 +37,22 @@ export async function moneyBtn() {
     });
 }
 
+export async function cartBtn() {
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("My order page loaded");
+    
+        // Selecting the explore menu button
+        const exploreButton = document.querySelector(".cart");
+    
+        if (exploreButton) {
+            exploreButton.addEventListener("click", () => {
+                window.location.href = "my-order.html"; // Redirect to menu page
+            });
+        }
+    
+    });
+}
+
 export async function receiptBtn() {
     document.addEventListener("DOMContentLoaded", () => {
         console.log("About Us page loaded");
