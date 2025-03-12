@@ -1,30 +1,26 @@
 export async function returnBtn() {
     document.addEventListener("DOMContentLoaded", () => {
-    console.log("About Us page loaded");
+        // Selecting the explore menu button
+        const exploreButton = document.querySelector(".return-btn");
+        const backArrow = document.querySelector('.my-icon')
 
-    // Selecting the explore menu button
-    const exploreButton = document.querySelector(".return-btn");
-    const backArrow = document.querySelector('.my-icon')
+        if (exploreButton) {
+            exploreButton.addEventListener("click", () => {
+                window.location.href = "our-menu.html"; // Redirect to menu page
+            });
+        }
 
-    if (exploreButton) {
-        exploreButton.addEventListener("click", () => {
-            window.location.href = "our-menu.html"; // Redirect to menu page
-        });
-    }
-
-    if (backArrow) {
-        backArrow.addEventListener("click", () => {
-            window.location.href = "our-menu.html";
-        });
-    }
+        if (backArrow) {
+            backArrow.addEventListener("click", () => {
+                window.location.href = "our-menu.html";
+            });
+        }
 
     });
 }
 
 export async function moneyBtn() {
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("About Us page loaded");
-    
+    document.addEventListener("DOMContentLoaded", () => {    
         // Selecting the explore menu button
         const exploreButton = document.querySelector(".order-btn");
     
@@ -38,9 +34,7 @@ export async function moneyBtn() {
 }
 
 export async function cartBtn() {
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("My order page loaded");
-    
+    document.addEventListener("DOMContentLoaded", () => {    
         // Selecting the explore menu button
         const exploreButton = document.querySelector(".cart");
     
@@ -54,9 +48,7 @@ export async function cartBtn() {
 }
 
 export async function receiptBtn() {
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("About Us page loaded");
-    
+    document.addEventListener("DOMContentLoaded", () => {    
         // Selecting the explore menu button
         const exploreButton = document.querySelector(".receipt-btn");
     
