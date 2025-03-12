@@ -18,7 +18,41 @@ export function getCart() {
 }
 
 function orderCard(menu) {
-    
+  const orderList = document.querySelector('.order-list');
+
+  const listItem = document.createElement('li');
+  listItem.classList.add('order-item');
+
+  const title = document.createElement('h3');
+  title.textContent = menu.Name;
+
+  const price = document.createElement('p');
+  price.textContent = `Pris: ${menu.Price} SEK`;
+  price.classList.add('price')
+
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = "Ta bort";
+  removeBtn.classList.add('remove-btn');
+
+  removeBtn.addEventListener('click', () => removeFromCart(menu, listItem));
+
+  listItem.appendChild(title);
+  listItem.appendChild(price);
+  listItem.appendChild(removeBtn);
+
+  orderList.appendChild(listItem);
+}
+
+function removeFromCart(menu, listItem) {
+  let inCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  inCart = inCart.filter(cartItem => cartItem.Name !== menu.Name);
+
+  localStorage.setItem('cart', JSON.stringify(inCart));
+
+  listItem.remove();
+
+  console.log('Uppdaterad kundvagn:', inCart);
 }
 
 export function addToCart(menu, btn) {
