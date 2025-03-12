@@ -42,6 +42,8 @@ export async function getMenu() {
         if (dipBtn) {
             dipButton();
         }
+
+        cartAntal();
     } catch (error) {
         console.error('Det gick inte att hämta produkter:', error);
     }
@@ -212,4 +214,32 @@ function dipButton() {
             console.error('Det gick inte att hämta produkter:', error);
         }
     });
+}
+
+function cartAntal() {
+    const inCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let totalAntal = 0;
+
+    // Beräkna total antal varor i varukorgen
+    inCart.forEach(menu => {
+        totalAntal += menu.Antal;
+    });
+
+    // Hämta varukorgsikonen
+    const cartIcon = getElement('.cart');
+
+    // Kontrollera om det redan finns en tidigare antal-siffran och ta bort den
+    const existingAntal = cartIcon.querySelector('.antal-siffran');
+    if (existingAntal) {
+        cartIcon.removeChild(existingAntal);
+    }
+
+    // Skapa en ny p-tagg för att visa totalen
+    const antal = document.createElement('p');
+    antal.classList.add('antal-siffran');
+    antal.textContent = `${totalAntal}`;  // Visa det totala antalet
+
+    // Lägg till den nya antal-siffran i varukorgsikonen
+    cartIcon.appendChild(antal);
 }
