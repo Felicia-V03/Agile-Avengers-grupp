@@ -12,6 +12,7 @@ export function getCart() {
             orderCard(menu);
         });
       }
+      totalSum()
     });
 }
 
@@ -28,29 +29,30 @@ function orderCard(menu) {
   price.textContent = `Pris: ${menu.itemTotal} SEK`;
   price.classList.add('price')
 
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = "Ta bort";
-  removeBtn.classList.add('remove-btn');
+  const quantityContainer = document.createElement('div');
+    quantityContainer.classList.add('quantity-container');
 
-  removeBtn.addEventListener('click', () => removeFromCart(menu, listItem));
+    const decreaseBtn = document.createElement('button');
+    decreaseBtn.textContent = "▲";
+    decreaseBtn.classList.add('quantity-btn');
 
-  listItem.appendChild(title);
-  listItem.appendChild(price);
-  listItem.appendChild(removeBtn);
+    const quantityText = document.createElement('p');
+    quantityText.textContent = menu.Antal;
+    quantityText.classList.add('quantity-text');
 
-  orderList.appendChild(listItem);
-}
+    const increaseBtn = document.createElement('button');
+    increaseBtn.textContent = "▼";
+    increaseBtn.classList.add('quantity-btn');
 
-function removeFromCart(menu, listItem) {
-    let inCart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    inCart = inCart.filter(cartItem => cartItem.Name !== menu.Name);
-    
-    localStorage.setItem('cart', JSON.stringify(inCart));
-    
-    listItem.remove();
-    
-    console.log('Uppdaterad kundvagn:', inCart);
+    quantityContainer.appendChild(decreaseBtn);
+    quantityContainer.appendChild(quantityText);
+    quantityContainer.appendChild(increaseBtn);
+
+    listItem.appendChild(title);
+    listItem.appendChild(price);
+    listItem.appendChild(quantityContainer);
+
+    orderList.appendChild(listItem);
 }
 
 export function addToCart(menu, btn) {
@@ -97,6 +99,11 @@ export function totalSum() {
         });
 
         console.log('Total Price for all items:', totalPrice);
+
+        const orderSummary = document.querySelector('.order-summary');
+        if (orderSummary) {
+            orderSummary.textContent = `Total: ${totalPrice} SEK`;
+        }
 
         return totalPrice;
     } else {
