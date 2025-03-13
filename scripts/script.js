@@ -1,7 +1,7 @@
 import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
-import { returnBtn, moneyBtn, receiptBtn, cartBtn} from "../modules/button.js"
+import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
@@ -27,7 +27,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
     console.log('eta.html');
     timeLeft(15);
     randomOrderNmbr();
-    returnBtn();
+    newOrderBtn();
     receiptBtn();
 
 //Till order sidan visa upp odersnummer och information
@@ -42,7 +42,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 } else if(window.location.pathname === '/receipt.html') {
     console.log('receipt.html');
     getCart();
-    returnBtn();
+    newOrderBtn();
 
 }
 
