@@ -9,7 +9,7 @@ export function getCart() {
           const p = document.createElement('p');
           p.textContent = 'No items added yet';
           p.classList.add('no-items')
-          const orderContainer = getElement('.order-list');
+          const orderContainer = document.querySelector('.order-list');
           orderContainer.appendChild(p);
         } else {
           inCart.forEach(menu => {

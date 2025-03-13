@@ -19,6 +19,21 @@ export async function returnBtn() {
     });
 }
 
+export async function newOrderBtn() {
+    document.addEventListener("DOMContentLoaded", () => {    
+        // Selecting the explore menu button
+        const exploreButton = document.querySelector(".new-order-btn");
+    
+        if (exploreButton) {
+            exploreButton.addEventListener("click", () => {
+                window.location.href = "our-menu.html";
+                localStorage.removeItem('cart');
+            });
+        }
+    
+    });
+}
+
 export async function moneyBtn() {
     document.addEventListener("DOMContentLoaded", () => {    
         // Selecting the explore menu button
