@@ -28,3 +28,18 @@ export async function fetchMenuByType() {
     oData.menuType = data.items.type;
 }
 
+export async function fetchUser() {
+  // Hämta JSON-data från API:et
+  const response = await fetch('https://santosnr6.github.io/Data/yumyumusers.json');
+
+  // Kolla om vi fick ett OK-svar
+  if (!response.ok) {
+    throw new Error('Något gick fel när data skulle hämtas.');
+  }
+
+  const users = await response.json();
+
+  oData.user = users.users;
+}
+
+
