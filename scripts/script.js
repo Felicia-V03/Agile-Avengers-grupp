@@ -2,6 +2,7 @@ import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn} from "../modules/button.js"
+import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
 if(window.location.pathname === '/' || window.location.pathname === '/index.html') {
@@ -24,12 +25,15 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
 //Till matlagningstid sidan visa upp lång tid det tar före användare kan hämta sin mat
 } else if(window.location.pathname === '/eta.html') {
     console.log('eta.html');
+    timeLeft(15);
+    randomOrderNmbr();
     returnBtn();
     receiptBtn();
 
 //Till order sidan visa upp odersnummer och information
 } else if(window.location.pathname === '/my-order.html') {
     console.log('my-order.html');
+    localStorage.removeItem('orderNumber');
     getCart();
     moneyBtn();
     returnBtn();

@@ -296,6 +296,10 @@
     width: 100%;
 }
 
+.no-items {
+    text-align: center;
+}
+
 .order-item {
     display: flex;
     flex-direction: row;

@@ -8,7 +8,8 @@ export function getCart() {
         if (inCart.length === 0) {
           const p = document.createElement('p');
           p.textContent = 'No items added yet';
-          const orderContainer = getElement('.order-container');
+          p.classList.add('no-items')
+          const orderContainer = getElement('.order-list');
           orderContainer.appendChild(p);
         } else {
           inCart.forEach(menu => {
