@@ -651,3 +651,539 @@
     background: var(--button-hover);
 }
 
+/* ============ About us about_us.html ================= */
+.about-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height */
+    justify-content: space-between;
+    color: var(--secondary-text-color);
+    line-height: 24px;
+}
+
+
+.about-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    width: 50px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* About Box */
+.about-box {
+    font-family: var(--primary-font);
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Make it more compact */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-logo {   
+    width: 50px;
+}
+
+.about-title {
+    color: var(--secondary-text-color)
+}
+
+.about-img img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.more-text {
+    display: none;
+  }
+  
+  .toggle:checked ~ .more-text {
+    display: block;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  .toggle-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  /* Default text: Läs mer */
+  .toggle-btn::after {
+    content: " Läs mer";
+  }
+  
+  /* When checkbox is checked, show Läs mindre AFTER all content */
+  .toggle:checked ~ .more-text + .toggle-btn::after {
+    content: " Läs mindre";
+  }
+  
+
+
+
+/*====contact us part =====*/
+
+.contact-us {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-bg-color);
+    border-radius: 5px;
+}
+
+.contact-title {
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Makes it as wide as the text container */
+    max-width: auto; /* Adjust width if needed */
+}
+
+.contact-details a, .contact-details span {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+}
+
+/* ======button to lead to main menu ========*/
+.about-btn {
+    display: block;
+    width: 100%;
+    background-color:var(--primary-button-color);
+}
+
+.about-btn:hover {
+    background: var(--button-hover);
+}
+
+/*=================log-in.html Page===========*/
+
+
+/* General Styling */
+.log-in-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.login-form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Forgot Password Section */
+.forgot-text {
+    font-size: 12px;
+    margin-top: 1rem;
+    color: #333;
+}
+
+/* Forgot Password Input */
+#forgot-password {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+/* Register Section */
+.register-text {
+    font-size: 12px;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.register-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+/* Positioning the logo in the top-left corner */
+.top-left-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 64px; /* Adjust to match the design */
+    height: auto;
+}
+
+/* Styling for error messages */
+.error-text {
+    color: red;
+    margin-top: 0px;
+    font-size: 12px;
+
+}
+
+/* Success Message Styling */
+.success-text {
+    color: green !important;
+}
+
+.forgot-container {
+    display: flex;
+    flex-direction: column; /* Stack input & button vertically */
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.verify-btn {
+    width: 100%;
+    background: #353131; /* Same as Log In and Register */
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px; /* Adds some space */
+}
+
+.verify-btn:hover {
+    background-color: black; /* Darker on hover */
+}
+
+
+/*============== register.html page ==================*/
+/* Register Page Styling */
+.register-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.register-container {
+    background: #d3d3d3; /* Light gray */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+.register-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.register-form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: black;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.gender-selection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.gender-selection input {
+    margin-right: 5px;
+}
+
+
+
+/* ========== my-rofile.html Page Styling ========== */
+.profile-container {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    width: 100%;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+.profile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+/* Profile Box */
+.profile-box {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.profile-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.profile-info {
+    font-size: 16px;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    font-family: var(--primary-text-color);
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+}
+
+.edit-profile-btn {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    background-color: #8ED8BF;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Buttons */
+.support-btn, .order-history-btn, .menu-btn {
+    width: 90%;
+    max-width: 400px;
+    background: var(--primary-button-color);
+    color: var(--primary-text-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.support-btn i {
+    margin-right: 8px;
+}
+
+/* ========== edit-profile.html Page ========== */
+
+
+.edit-profile-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.edit-profile-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.edit-profile-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.edit-profile-form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+}
+
+.edit-profile-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Save Button */
+.save-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
