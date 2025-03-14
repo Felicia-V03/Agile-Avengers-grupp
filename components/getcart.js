@@ -98,27 +98,28 @@ function totalSum() {
         let totalPrice = 0;
 
         inCart.forEach(menu => {
-            const itemTotal = menu.Price * menu.Antal;
+            const itemTotal = (menu.Price * menu.Antal) * 112 / 100;
             totalPrice += itemTotal;
 
             console.log(`${menu.Name}: Total Price = ${itemTotal} (Price: ${menu.Price} * Antal: ${menu.Antal})`);
         });
 
-        console.log('Total Price for all items:', totalPrice);
+        console.log('Total Price for all items:', totalPrice.toFixed(0), 'SEK');
 
         const orderSummary = document.querySelector('.order-summary');
         if (orderSummary) {
-            orderSummary.textContent = `Total: ${totalPrice} SEK`;
+            orderSummary.textContent = `Total: ${totalPrice.toFixed(0)} SEK`;
         }
 
         const orderSummarySpan = document.querySelector('.order-summary-span');
         if (orderSummarySpan) {
-            orderSummarySpan.textContent = `${totalPrice} SEK`;
+            orderSummarySpan.textContent = `${totalPrice.toFixed(0)} SEK`;
         }
 
         return totalPrice;
     } else {
         console.log('Varukorgen är tom');
+        document.querySelector('.order-summary').textContent = 'Varukorgen är tom';
         return {
             totalPrice: 0,
         };

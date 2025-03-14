@@ -33,7 +33,7 @@ export function randomOrderNmbr() {
 
         localStorage.setItem('orderNumber', orderNumber);
     }
-    const confirmationElement = document.querySelector('#confrimationNmbr');
+    const confirmationElement = document.querySelector('#confirmationNmbr');
     if (confirmationElement) {
         confirmationElement.textContent = `#${orderNumber}`;
     }
