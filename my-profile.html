@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./modules/profile.js"></script> <!-- ✅ Fixed script path -->
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Header -->
+        <header class="profile-header">
+            <img src="assets/yygs.png" alt="YYGS Logo" class="header-logo">
+            <button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-box">
+            <div class="profile-pic-container">
+                <img id="profileImage" src="assets/default.png" alt="User Profile" class="profile-pic">
+                <!-- ✅ Dynamic Profile Image -->
+                <button class="edit-profile-btn"><i class="fa-solid fa-pen"></i></button>
+            </div>
+            <h2 class="profile-title">MIN PROFIL</h2>
+            <p class="profile-info"><strong>NAMN:</strong> <span id="profileName">Laddar...</span></p>
+            <!-- ✅ Name Updates -->
+            <p class="profile-info"><strong>EMAIL:</strong> <span id="profileEmail">Laddar...</span></p>
+            <!-- ✅ Email Updates -->
+            <p class="profile-info"><strong>MOBILNUMMER:</strong> <span id="profileMobile">Laddar...</span></p>
+            <!-- ✅ Mobile Updates -->
+        </section>
+
+        <!-- Buttons -->
+        <button class="support-btn"><i class="fa-solid fa-paper-plane"></i> Kontakta kundtjänst</button>
+        <button class="order-history-btn">BESTÄLLNINGSHISTORIK</button>
+        <button class="menu-btn">TILL HUVUDMENYN</button>
+    </div>
+</body>
+
+</html>

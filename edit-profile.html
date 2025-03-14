@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redigera Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./modules/editProfile.js"></script>
+</head>
+
+<body>
+    <section class="edit-profile-page">
+        <div class="edit-profile-container">
+            <header>
+                <img src="./assets/yygs.png" alt="YYGS Logo" class="top-left-logo">
+                <img src="./assets/logo.png" alt="logo">
+            </header>
+            <h2 class="edit-profile-title">EDIT PROFILE</h2>
+
+            <form class="edit-profile-form">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mobile">Mobilnummer:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="save-btn">SAVE</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
