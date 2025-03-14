@@ -5,7 +5,7 @@ import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
-if(window.location.pathname === '/' || window.location.pathname === '/index.html') {
+if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
     console.log('index.html');
     time();
 
@@ -43,6 +43,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/index.html
     console.log('receipt.html');
     getCart();
     newOrderBtn();
+    randomOrderNmbr();
 
 }
 
