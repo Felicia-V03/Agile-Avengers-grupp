@@ -123,4 +123,4 @@ export function loginUser() {
 }
 
 // ✅ Ensure the function runs when the script loads
-loginUser();
+// loginUser();

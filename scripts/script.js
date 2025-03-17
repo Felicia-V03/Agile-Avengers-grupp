@@ -67,18 +67,23 @@ function time() {
 ////////////////////////////////////////////////////////////
 
 if (window.location.pathname === '/profile.html') {
+    console.log('profile.html');
     loadProfile();
 }
 if (window.location.pathname === '/register.html') {
+    console.log('register.html');
     registerUser();
 }
 if (window.location.pathname === '/log-in.html') {
+    console.log('log-in.html');
     loginUser();
 }
 if (window.location.pathname === '/edit-profile.html') {
+    console.log('edit-profile.html');
     editUserProfile();
 }
 if (window.location.pathname === '/my-profile.html') {
+    console.log('my-profile.html');
     manageProfilePage();
 }
 ///////////////////////////////////////////////////////////////

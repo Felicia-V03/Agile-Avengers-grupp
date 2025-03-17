@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    loadProfile(); // Load profile when the page is ready
+    // loadProfile(); // Load profile when the page is ready
 });
 }
-// ✅ Ensure the function runs when the script loads
-editUserProfile();
+// // ✅ Ensure the function runs when the script loads
+// editUserProfile();
