@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function registerUser() {
+    document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const mobileInput = document.getElementById("mobile");
@@ -112,3 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+}
+// ✅ Ensure the function runs when the script loads
+registerUser();

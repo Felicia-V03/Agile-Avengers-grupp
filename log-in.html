@@ -11,22 +11,21 @@
 
 <body>
     <section class="log-in-page" id="logInPage">
-
         <div class="login-container">
             <header>
                 <img src="./assets/yygs.png" alt="YYGS Logo" class="top-left-logo">
                 <img src="./assets/logo.png" alt="logo">
             </header>
-            <h1 class="title">REGISTRERING</h1>
+            <h1 class="title">LOG-IN</h1>
 
             <form class="login-form">
                 <!-- Username Field -->
                 <label for="username">E-mail or Mobile Number:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required autocomplete="off">
 
                 <!-- Password Field -->
-                <label for="password">password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="off">
 
                 <!-- Login Button -->
                 <button type="submit" class="login-btn">LOG IN</button>
@@ -35,15 +34,15 @@
             <!-- Forgot Password Section -->
             <p class="forgot-text">Forgot password?</p>
             <div class="forgot-container">
-                <input type="text" id="forgot-password" name="forgot-password" placeholder="E-mail or Mobile Number">
+                <input type="text" id="forgot-password" name="forgot-password" placeholder="E-mail or Mobile Number"
+                    autocomplete="off">
                 <button type="button" class="verify-btn">Verify</button>
             </div>
             <p class="error-text"></p>
 
-
             <!-- Register Section -->
-            <p class="register-text">Not registered yet? please register now.</p>
-            <button class="register-btn">REGISTER</button>
+            <p class="register-text">Not registered yet? Please register now.</p>
+            <button type="button" class="register-btn">REGISTER</button>
         </div>
     </section>
 </body>
