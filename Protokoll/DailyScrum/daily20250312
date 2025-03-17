@@ -1,0 +1,40 @@
+Mötesprotokoll (2025-03-12)
+
+Närvarande
+* Saga
+* Felicia
+* Thapa
+* Sunsanee
+
+Protokoll
+* Vad gjorde du igår?
+* Vad ska du göra idag?
+* Finns det några hinder?
+
+Saga
+
+* Började lite med kundvagnsfunktioner. Fixade mycket småsaker i styling och lite här och där för att göra det mer   cleant.
+* Fixa så att produkterna skrivs ut i kundvagnen på applikationen, alltså i DOMen. Även lägga till pilar så att man kan ändra antal produkter direkt i kundvagnen.
+* Kommer nog behöva tips på funktion för pilarna, annars inga hinder.
+
+Felicia
+
+* Färdigställde api så det funkar som det ska. Fixade även knapparna så att dom leder till rätt sida.
+* Jobba med kundvagnen så att localstorage funkar, och färdigställa den. Även försöka fixa en funktion för antal-pilarna så att dom fungerar.
+* Inga hinder atm.
+
+Thapa
+
+* Skapade och designade login och registrerings sidorna, började även med my profile.
+* Fortsätta med dom ovanstående sidorna och även börja med lite funktioner på dom sidorna. 
+* Inga hinder just nu utan ska bara fortsätta jobba på.
+
+Sunsanee
+
+* Gjorde klart filtrerings menyn så att den fungerar som den ska.
+* Försöka börja med en dropdown funktion för kundvagnen, så att man kan se vad man har i kundvagnen utan att gå in i den.
+* Inga hinder för tillfället.
+
+
+Övrigt
+Vi jobbar på med våra tilldelade uppgifter och pushar upp ofta så det är många småfunktioner och detaljer som ska fixas. Så vi håller varandra uppdateraade under dagen så man vet när vi måste dra ner den senaste versionen. Och som vanligt om någon fastnar skriver vi på discord och ses på teams så vi kan hjälpas åt.
