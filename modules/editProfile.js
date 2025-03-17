@@ -1,3 +1,4 @@
+export function editUserProfile() {
 document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
@@ -104,3 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loadProfile(); // Load profile when the page is ready
 });
+}
+// ✅ Ensure the function runs when the script loads
+editUserProfile();

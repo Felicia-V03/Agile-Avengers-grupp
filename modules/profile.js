@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function loadProfile() {
+    document.addEventListener("DOMContentLoaded", function () {
     const profileName = document.getElementById("profileName");
     const profileEmail = document.getElementById("profileEmail");
     const profileMobile = document.getElementById("profileMobile");
@@ -21,3 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         profileImage.src = "./assets/default.png";
     }
 });
+}
+// ✅ Ensure the function runs when the script loads
+loadProfile();

@@ -4,6 +4,14 @@ import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 
+///////////////////////////////////////////////////////////////////
+import { loadProfile } from "../modules/profile.js";
+import { registerUser } from "../modules/register.js";
+import { loginUser } from "../modules/logIn.js";
+import { editUserProfile } from "../modules/editProfile.js";
+import { manageProfilePage } from "../modules/myProfile.js";
+////////////////////////////////////////////////////////////////////////
+
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
 if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
     console.log('index.html');
@@ -52,3 +60,25 @@ function time() {
         window.location.href = "our-menu.html";
     }, 3000);
 }
+
+
+
+
+////////////////////////////////////////////////////////////
+
+if (window.location.pathname === '/profile.html') {
+    loadProfile();
+}
+if (window.location.pathname === '/register.html') {
+    registerUser();
+}
+if (window.location.pathname === '/log-in.html') {
+    loginUser();
+}
+if (window.location.pathname === '/edit-profile.html') {
+    editUserProfile();
+}
+if (window.location.pathname === '/my-profile.html') {
+    manageProfilePage();
+}
+///////////////////////////////////////////////////////////////
