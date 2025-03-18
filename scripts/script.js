@@ -3,6 +3,7 @@ import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
+import { loadGoogleMaps } from "../modules/findUs.js";
 
 ///////////////////////////////////////////////////////////////////
 import { loadProfile } from "../modules/profile.js";
@@ -53,6 +54,12 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     newOrderBtn();
     randomOrderNmbr();
 
+} else if(window.location.pathname === '/find-us.html') {
+    console.log('find-us.html');
+    document.addEventListener('DOMContentLoaded', () => {
+        loadGoogleMaps();
+    });
+    returnBtn();
 }
 
 function time() {
