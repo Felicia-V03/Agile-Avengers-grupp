@@ -953,15 +953,15 @@
 }
 
 .register-title {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 24px;
     margin-bottom: 1rem;
 }
 
 .register-form label {
     display: block;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight:400;
     margin-bottom: 0.2rem;
 }
 
@@ -969,18 +969,18 @@
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .register-btn {
+    margin-top: 5px;
+    text-align: center;
     width: 100%;
-    background: #353131;
+    background:var(--primary-button-color);
     color: white;
-    padding: 0.7rem;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -1015,7 +1015,7 @@
 
 
 
-/* ========== my-rofile.html Page Styling ========== */
+/* ========== my-profile.html Page Styling ========== */
 .profile-container {
     background-color: #8ED8BF; /* Light green background */
     background-image: url("assets/leaves-bg.png"); /* Background image */
@@ -1045,10 +1045,9 @@
     border-radius: 5px;
 }
 
-
 /* Profile Box */
 .profile-box {
-    background: white;
+    background: #d3d3d3; /* Light gray */
     border-radius: 10px;
     text-align: center;
     padding: 1.5rem;
@@ -1094,9 +1093,20 @@
     cursor: pointer;
 }
 
-/* Buttons */
+/* Center align the button container */
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    max-width: 400px; /* Ensures buttons match profile box width */
+}
+
+/* Buttons - Aligned to Profile Box */
 .support-btn, .order-history-btn, .menu-btn {
-    width: 90%;
+    width: 100%; /* Matches profile box width */
     max-width: 400px;
     background: var(--primary-button-color);
     color: var(--primary-text-color);
@@ -1108,6 +1118,9 @@
     text-align: center;
     cursor: pointer;
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1121,7 +1134,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: repeat; /* Ensures the pattern repeats */
-    font-family: var(--primary-font);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1129,17 +1141,18 @@
 }
 
 .edit-profile-container {
-    background: white;
+    background: #d3d3d3; /* Light gray */
+    font-family: var(--primary-text-color);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 300px;
+    width: 350px;
 }
 
 .edit-profile-title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
@@ -1147,16 +1160,15 @@
 .edit-profile-form label {
     display: block;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0.2rem;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .edit-profile-form input {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
@@ -1168,7 +1180,7 @@
     padding: 0.7rem;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
 }
 
