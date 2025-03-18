@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing page</title>
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://kit.fontawesome.com/f300007e95.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="./components/slide-viewer.js"></script>
+       
+    </head>
+  <body>
+    <header class="header">
+        <section class="landing-page" id="menuPage">
+            <section class="menu-header">
+                <img src="./assets/logo.png" alt="logo">
+                <i class="fa-solid fa-bars"></i>
+            </section>
+          </header>
+          <!-- Slideshow container -->
+            <section class="slide-viewer">
+                <div class="slide-group">
+                      <figure class="slide slide-1 fade">
+                          <img
+                              src="./assets/images/wonton.png"
+                              alt="Wonton"
+                              class="offer-items__img"
+                          />
+                    
+                      </figure>
+                      <figure class="slide slide-2 fade">
+                          <img
+                              src="./assets/images/burger-3.png"
+                              alt="Burger"
+                              class="offer-items__img"
+                          />
+                      </figure>
+                      <figure class="slide slide-3 fade">
+                          <img
+                              src="./assets/images/japanise-food.jpg"
+                              alt="Japanise-food"
+                              class="offer-items__img"
+                          />
+                      </figure>
+                      <figure class="slide slide-4 fade">
+                          <img
+                              src="./assets/images/fried-wonton.png"
+                              alt="hamburger"
+                              class="offer-items__img"
+                          />
+                      </figure>
+                      <figure class="slide slide-5 fade">
+                          <img
+                              src="./assets/images/sandwiches.jpg"
+                              alt="sandwiches"
+                              class="offer-items__img"
+                          />
+                      </figure>
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+              </section>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+              </div>
+              
+    <section>
+      <div class="content-wrapper center">
+        <h1 class="landing-page-title">Välkommen till</h1>
+        <h1 class="landing-page-title">Yum Yum Gimmei Sum!</h1>
+        <section class="landing-card" id="landingContainer">
+          <h3 class="landing-text-content">
+            "Ett smakäventyr på hjul! Hos Yum Yum Gimmie Sum hittar du en spännande mix av favoriter – från saftiga burgare till fräscha Wonton. Vi har något för alla smaklökar. Följ med på en kulinarisk resa!"
+          </h3>
+         
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
