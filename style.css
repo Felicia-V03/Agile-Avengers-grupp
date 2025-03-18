@@ -1171,3 +1171,61 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+/* --------FIND US---------- */
+
+.wrapper-find-us {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.white-arrow {
+    color: var(--primary-text-color);
+}
+
+.find-us-title {
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 25rem;
+    border-radius: 5px;
+    background-color: var(--primary-bg-color);
+    margin-top: 3rem;
+}
+
+.adress-container {
+    margin-top: 2rem;
+}
+
+.sub-title-find-us {
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin-top: 1rem;
+}
+
+.adress-list a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+
