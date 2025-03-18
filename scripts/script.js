@@ -1,7 +1,7 @@
 import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
-import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
+import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
@@ -23,8 +23,9 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 
 } else if(window.location.pathname === '/landing-page.html') {
     console.log('landing-page.html');
-
-   initSlider();
+    openAndCloseNav();
+    findUsButton();
+    initSlider();
     
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
@@ -38,7 +39,8 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 //Till about us sidan visa information om våran app
 } else if(window.location.pathname === '/about-us.html') {
     console.log('about-us.html');
-    returnBtn();
+    initSlider();
+    aboutButton();
 
 //Till matlagningstid sidan visa upp lång tid det tar före användare kan hämta sin mat
 } else if(window.location.pathname === '/eta.html') {
