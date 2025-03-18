@@ -1241,3 +1241,108 @@
     font-size: 18px;
 }
 
+/*---------- Landing Page ------------*/
+.landing-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    padding: 1.5rem;
+}
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    margin: auto;
+}
+.slide-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+.slide:first-child {
+    display: block;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+.landing-page-title {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: var(--primary-bg-color);
+    text-align: center;
+    margin: 1rem 0;
+}
+.landing-text-content {
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    text-align: justify;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+

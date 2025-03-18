@@ -4,6 +4,9 @@ import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
+import { showSlides } from "../components/slide-viewer.js";
+import { plusSlides, currentSlide } from "../components/slide-viewer.js";
+
 
 ///////////////////////////////////////////////////////////////////
 import { loadProfile } from "../modules/profile.js";
@@ -17,6 +20,14 @@ import { manageProfilePage } from "../modules/myProfile.js";
 if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
     console.log('index.html');
     time();
+
+
+} else if(window.location.pathname === '/landing-page.html') {
+    console.log('landing-page.html');
+    openAndCloseNav();
+    plusSlides();
+    currentSlide();
+    showSlides();
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
 } else if(window.location.pathname === '/our-menu.html') {
@@ -64,7 +75,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 
 function time() {
     setTimeout(function() {
-        window.location.href = "our-menu.html";
+        window.location.href = "landing-page.html";
     }, 3000);
 }
 
