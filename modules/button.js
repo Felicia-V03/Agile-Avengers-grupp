@@ -1,3 +1,5 @@
+import { createElement, getElement } from "../utils/domUtils.js";
+
 export async function returnBtn() {
     document.addEventListener("DOMContentLoaded", () => {
         // Selecting the explore menu button
@@ -57,7 +59,7 @@ export async function cartBtn() {
             exploreButton.addEventListener("click", () => {
                 window.location.href = "my-order.html"; // Redirect to menu page
             });
-        }
+        } 
     
     });
 }
@@ -74,4 +76,30 @@ export async function receiptBtn() {
         }
     
     });
+}
+
+export async function aboutButton() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".about-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "landing-page.html";
+            });
+        }
+    });
+    
+}
+
+export async function findUsButton() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".find-us-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "find-us.html";
+            });
+        }
+    });
+    
 }
