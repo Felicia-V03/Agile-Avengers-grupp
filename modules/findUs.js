@@ -13,22 +13,23 @@ export function loadGoogleMaps() {
 function initMap() {
     const mapOptions = {
         center: { lat: 59.4024, lng: 13.5116 },
-        zoom: 12,
+        zoom: 10,
     };
 
     const mapContainer = document.querySelector('.map');
     map = new google.maps.Map(mapContainer, mapOptions);
 
     setupAddressLinks(); 
+    addPins();
 }
 
 function setupAddressLinks() {
     const locations = [
-        { lat: 59.3795, lng: 13.5005 }, 
-        { lat: 59.3799, lng: 13.5114 }, 
-        { lat: 59.3283, lng: 13.4823 }, 
-        { lat: 59.3289, lng: 13.4681 }, 
-        { lat: 59.4142, lng: 13.6581 }, 
+        { lat: 59.40535, lng: 13.57969 }, 
+        { lat: 59.38127, lng: 13.50468 }, 
+        { lat: 59.34459, lng: 13.50450 }, 
+        { lat: 59.32294, lng: 13.46565 }, 
+        { lat: 59.41304, lng: 13.67427 }, 
     ];
 
     document.querySelectorAll('.adress-list a').forEach((link, index) => {
@@ -38,6 +39,24 @@ function setupAddressLinks() {
             if (location) {
                 moveToLocation(location.lat, location.lng);
             }
+        });
+    });
+}
+
+function addPins() {
+    const locations = [
+        { lat: 59.40535, lng: 13.57969, title: 'Sommargatan 112, Karlstad' },
+        { lat: 59.38127, lng: 13.50468, title: 'Östra Torggatan 14, Karlstad' },
+        { lat: 59.34459, lng: 13.50450, title: 'Bivägen 7, Hammarö' },
+        { lat: 59.32294, lng: 13.46565, title: 'Lillängsvägen 14, Skoghall' },
+        { lat: 59.41304, lng: 13.67427, title: 'Skattkärrsvägen 41, Skattkärr' },
+    ];
+
+    locations.forEach(location => {
+        new google.maps.Marker({
+            position: { lat: location.lat, lng: location.lng },
+            map: map,
+            title: location.title,
         });
     });
 }
