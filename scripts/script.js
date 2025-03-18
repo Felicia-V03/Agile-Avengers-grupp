@@ -4,8 +4,7 @@ import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn} from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
-import { showSlides } from "../components/slide-viewer.js";
-import { plusSlides, currentSlide } from "../components/slide-viewer.js";
+import { initSlider } from "../components/landing-page.js";
 
 
 ///////////////////////////////////////////////////////////////////
@@ -24,10 +23,9 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 
 } else if(window.location.pathname === '/landing-page.html') {
     console.log('landing-page.html');
-    openAndCloseNav();
-    plusSlides();
-    currentSlide();
-    showSlides();
+
+   initSlider();
+    
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
 } else if(window.location.pathname === '/our-menu.html') {
