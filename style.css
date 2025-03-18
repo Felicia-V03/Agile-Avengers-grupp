@@ -794,6 +794,17 @@
     height: 100vh;
 }
 
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #353131;
+    cursor: pointer;
+}
+ 
+
 /* Container for the login form */
 .login-container {
     background: white;

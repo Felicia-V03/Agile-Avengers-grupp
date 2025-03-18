@@ -7,6 +7,14 @@ export function loginUser() {
         const loginBtn = document.querySelector(".login-btn");
         const verifyBtn = document.querySelector(".verify-btn");
         const registerBtn = document.querySelector(".register-btn");
+        const backArrow = document.querySelector(".back-arrow"); // ✅ Get the back arrow
+
+        // ✅ Add event listener to the back arrow
+        if (backArrow) {
+            backArrow.addEventListener("click", function () {
+                window.location.href = "our-menu.html";
+            });
+        }
 
         // Function to show an error message
         function showError(input, message, color = "red") {
@@ -30,10 +38,8 @@ export function loginUser() {
         username.addEventListener("input", function () {
             let value = username.value.trim();
             if (value.includes("@") || isNaN(value)) {
-                // Allow text input (emails)
                 username.value = value;
             } else {
-                // Format only numbers as phone numbers
                 username.value = formatMobileNumber(value);
             }
         });
@@ -41,10 +47,8 @@ export function loginUser() {
         forgotPassword.addEventListener("input", function () {
             let value = forgotPassword.value.trim();
             if (value.includes("@") || isNaN(value)) {
-                // Allow text input (emails)
                 forgotPassword.value = value;
             } else {
-                // Format only numbers as phone numbers
                 forgotPassword.value = formatMobileNumber(value);
             }
         });
@@ -123,4 +127,4 @@ export function loginUser() {
 }
 
 // ✅ Ensure the function runs when the script loads
-// loginUser();
+loginUser();
