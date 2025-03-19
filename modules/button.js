@@ -39,7 +39,7 @@ export async function newOrderBtn() {
 export async function moneyBtn() {
     document.addEventListener("DOMContentLoaded", () => {    
         // Selecting the explore menu button
-        const exploreButton = document.querySelector(".order-btn");
+        const exploreButton = document.querySelector(".money-btn");
     
         if (exploreButton) {
             exploreButton.addEventListener("click", () => {
@@ -98,6 +98,33 @@ export async function findUsButton() {
         if (aboutBtn) {
             aboutBtn.addEventListener("click", () => {
                 window.location.href = "find-us.html";
+            });
+        }
+    });
+    
+}
+
+
+export async function registerButton() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".register-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "register.html";
+            });
+        }
+    });
+    
+}
+
+export async function loginButton() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".login-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "my-profile.html";
             });
         }
     });

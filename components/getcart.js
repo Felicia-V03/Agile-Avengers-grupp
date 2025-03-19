@@ -113,6 +113,7 @@ function totalSum() {
     } else {
         console.log('Varukorgen är tom');
         document.querySelector('.order-summary').textContent = 'Varukorgen är tom';
+        document.querySelector('.order-btn').classList.remove('money-btn');
         return {
             totalPrice: 0,
         };

@@ -44,14 +44,14 @@ export function loginUser() {
             }
         });
 
-        forgotPassword.addEventListener("input", function () {
-            let value = forgotPassword.value.trim();
-            if (value.includes("@") || isNaN(value)) {
-                forgotPassword.value = value;
-            } else {
-                forgotPassword.value = formatMobileNumber(value);
-            }
-        });
+        // forgotPassword.addEventListener("input", function () {
+        //     let value = forgotPassword.value.trim();
+        //     if (value.includes("@") || isNaN(value)) {
+        //         forgotPassword.value = value;
+        //     } else {
+        //         forgotPassword.value = formatMobileNumber(value);
+        //     }
+        // });
 
         // 📌 Format function for mobile numbers (only if it's a number)
         function formatMobileNumber(value) {
@@ -98,31 +98,26 @@ export function loginUser() {
         });
 
         // 📌 Verify button: Check email or phone number
-        verifyBtn.addEventListener("click", function () {
-            let value = forgotPassword.value.trim();
-            let numericValue = value.replace(/\D/g, ""); // Remove spaces for validation
+        // verifyBtn.addEventListener("click", function () {
+        //     let value = forgotPassword.value.trim();
+        //     let numericValue = value.replace(/\D/g, ""); // Remove spaces for validation
 
-            if (value.includes("@")) {
-                clearError(forgotPassword);
-                showError(forgotPassword, "Login detail sent, change password", "green");
-                forgotPassword.value = ""; // Clear input
-            } else if (/^\d{10}$/.test(numericValue)) {
-                if (/^(\d)\1{9}$/.test(numericValue)) {
-                    showError(forgotPassword, "Number does not exist");
-                } else {
-                    clearError(forgotPassword);
-                    showError(forgotPassword, "Code sent, change your password", "green");
-                    forgotPassword.value = ""; // Clear input
-                }
-            } else {
-                showError(forgotPassword, "Enter a valid email or 10-digit number");
-            }
-        });
-
-        // 📌 Register button: Redirect to "register.html"
-        registerBtn.addEventListener("click", function () {
-            window.location.href = "register.html";
-        });
+        //     if (value.includes("@")) {
+        //         clearError(forgotPassword);
+        //         showError(forgotPassword, "Login detail sent, change password", "green");
+        //         forgotPassword.value = ""; // Clear input
+        //     } else if (/^\d{10}$/.test(numericValue)) {
+        //         if (/^(\d)\1{9}$/.test(numericValue)) {
+        //             showError(forgotPassword, "Number does not exist");
+        //         } else {
+        //             clearError(forgotPassword);
+        //             showError(forgotPassword, "Code sent, change your password", "green");
+        //             forgotPassword.value = ""; // Clear input
+        //         }
+        //     } else {
+        //         showError(forgotPassword, "Enter a valid email or 10-digit number");
+        //     }
+        // });
     });
 }
 
