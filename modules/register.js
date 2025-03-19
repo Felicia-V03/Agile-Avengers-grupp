@@ -107,5 +107,3 @@ export function registerUser() {
     });
 }
 
-// ✅ Ensure the function runs when the script loads
-registerUser();

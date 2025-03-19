@@ -5,6 +5,7 @@ import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, fin
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
+import { showOrderDetails } from "../modules/orderHistory.js";
 
 
 ///////////////////////////////////////////////////////////////////
@@ -71,6 +72,10 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
         loadGoogleMaps();
     });
     returnBtn();
+}
+else if(window.location.pathname === '/order-history.html') {
+    console.log('order-history.html')
+    showOrderDetails();
 }
 
 function time() {
