@@ -51,5 +51,3 @@ export function manageProfilePage() {
     });
 }
 
-// ✅ Ensure the function runs when the script loads
-// manageProfilePage();
