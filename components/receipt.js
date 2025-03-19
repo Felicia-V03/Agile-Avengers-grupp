@@ -28,51 +28,6 @@ export function getLatestOrder() {
     latestOrderDisplay(latestOrder);
 }
 
-// function updateUserOrderHistory(username, email, telefon, password, latestOrder) {
-//     const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-
-//     if (
-//         currentUser.username !== username || 
-//         currentUser.email !== email || 
-//         currentUser.telefon !== telefon || 
-//         currentUser.password !== password
-//     ) {
-//         console.log(`Användarinformationen stämmer inte överens med det aktuella kontot.`);
-//         return;
-//     }
-
-//     if (!currentUser.orderHistory) {
-//         currentUser.orderHistory = [];
-//     }
-
-//     currentUser.orderHistory.unshift(latestOrder);
-
-//     localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
-//     console.log(`Uppdaterad orderhistorik för användare ${username}.`);
-
-//     const userList = JSON.parse(localStorage.getItem('users')) || [];
-
-//     const userIndex = userList.findIndex(user => 
-//         user.username === username || 
-//         user.email === email || 
-//         user.telefon === telefon
-//     );
-
-//     if (userIndex !== -1) {
-//         userList[userIndex] = { ...userList[userIndex], ...currentUser };
-//         userList.push({
-//             username: username,
-//             email: email,
-//             telefon: telefon,
-//             password: password,
-//             orderHistory: [latestOrder]
-//         });
-//     }
-
-//     localStorage.setItem('users', JSON.stringify(userList));
-// }
-
 function updateUserOrderHistory(userId, latestOrder) {
     const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 
@@ -86,63 +41,32 @@ function updateUserOrderHistory(userId, latestOrder) {
 
     console.log(`Uppdaterad orderhistorik för användare ${userId}.`);
 
-    // Uppdatera användarlistan
     const userList = JSON.parse(localStorage.getItem('users')) || [];
-    const userIndex = userList.findIndex(user => user.id === userId); // Fixed typo here
 
-    if (userIndex === currentUser) {
-        if (!userList[userIndex].orderHistory) {
-            userList[userIndex].orderHistory = [];
-        }
-        userList[userIndex].orderHistory.unshift(latestOrder);
+    const userIndex = userList.findIndex(user => 
+        user.username === currentUser.username ||
+        user.email === currentUser.email ||
+        user.telefon === currentUser.telefon ||
+        user.password === currentUser.password
+    );
+
+    if (userIndex !== -1) {
+        userList[userIndex] = {
+            ...userList[userIndex],
+            orderHistory: currentUser.orderHistory
+        };
     } else {
         userList.push({
-            id: userId, // Fixed userId array issue here
-            orderHistory: [latestOrder]
+            username: user.username,
+            email: user.email,
+            telefon: user.telefon,
+            password: user.password,
+            orderHistory: currentUser.orderHistory
         });
     }
 
     localStorage.setItem('users', JSON.stringify(userList));
 }
-
-// function updateUserOrderHistory(userId, latestOrder) {
-//     const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-
-//     // Kontrollera om det finns ett aktuellt användarkonto och om användar-ID:n matchar
-//     if (currentUser.id !== userId) {
-//         console.log(`Användar-ID:t ${userId} matchar inte det aktuella användarkontot.`);
-//         return; // Avbryt om användar-ID:n inte matchar
-//     }
-
-//     if (!currentUser.orderHistory) {
-//         currentUser.orderHistory = [];
-//     }
-
-//     // Lägg till den senaste ordern i början av orderhistoriken
-//     currentUser.orderHistory.unshift(latestOrder);
-
-//     // Ta bort den gamla användardatan från localStorage
-//     localStorage.removeItem('currentUser'); // Ta bort gammal data
-//     // Lägg in den uppdaterade användardatan i localStorage
-//     localStorage.setItem('currentUser', JSON.stringify(currentUser)); // Sätt den nya användardatan
-
-//     console.log(`Uppdaterad orderhistorik för användare ${userId}.`);
-
-//     // Uppdatera användarlistan
-//     const userList = JSON.parse(localStorage.getItem('users')) || [];
-
-//     // Ta bort användaren med samma ID från userList
-//     const updatedUserList = userList.filter(user => user.id !== userId);
-
-//     // Lägg till den uppdaterade användaren i listan
-//     updatedUserList.push(currentUser);
-
-//     // Uppdatera användarlistan i localStorage
-//     localStorage.setItem('users', JSON.stringify(updatedUserList));
-
-//     console.log(`Användare med ID ${userId} har ersatts i användarlistan.`);
-// }
-
 
 function latestOrderDisplay(order) {
     const orderContainer = document.querySelector('.order-list');
