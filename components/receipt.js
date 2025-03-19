@@ -144,17 +144,41 @@ function updateUserOrderHistory(userId, latestOrder) {
 // }
 
 
-
 function latestOrderDisplay(order) {
     const orderContainer = document.querySelector('.order-list');
+    orderContainer.textContent = ''; 
 
-    orderContainer.innerHTML = `
-        <h3>Senaste ordern: #${order.orderNumber}</h3>
-        <p>Datum: ${order.date}</p>
-        <ul>
-            ${order.items.map(item => `
-                <li>${item.Name} - Antal: ${item.Antal} - Pris: ${item.Price} SEK</li>
-            `).join('')}
-        </ul>
-    `;
+    const orderTitle = document.createElement('h3');
+    orderTitle.textContent = `Senaste ordern: #${order.orderNumber}`;
+    orderTitle.style.marginBottom = '1rem'
+    orderContainer.appendChild(orderTitle);
+
+    const orderDate = document.createElement('p');
+    orderDate.textContent = `Datum: ${order.date}`;
+    orderDate.style.fontWeight = 'bold'
+    orderContainer.appendChild(orderDate);
+
+    const orderList = document.createElement('ul');
+    
+
+    let totalSum = 0;
+
+    order.items.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.Name} - Antal: ${item.Antal} - Pris: ${item.Price} SEK`;
+        listItem.style.listStyle = 'none'
+        listItem.style.marginTop = '.5rem'
+        orderList.appendChild(listItem);
+
+        totalSum += item.Price * item.Antal;
+    });
+
+    orderContainer.appendChild(orderList);
+
+    const totalElement = document.createElement('p');
+    totalElement.textContent = `Totalt: ${totalSum} SEK`;
+    totalElement.style.fontWeight = 'bold'; 
+    const totalContainer = document.querySelector('.total')
+    totalContainer.style.marginTop = '1rem'
+    totalContainer.appendChild(totalElement);
 }
