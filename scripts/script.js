@@ -1,12 +1,12 @@
 import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
-import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton, registerButton } from "../modules/button.js"
+import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton, registerButton, orderHistoryBtn, returnMyProfile } from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
 import { getLatestOrder } from "../components/receipt.js";
-import { showOrderDetails } from "../modules/orderHistory.js";
+import { showOrderDetails, showOrderHistory } from "../modules/orderHistory.js";
 
 
 ///////////////////////////////////////////////////////////////////
@@ -78,6 +78,8 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 else if(window.location.pathname === '/order-history.html') {
     console.log('order-history.html')
     showOrderDetails();
+    showOrderHistory();
+    returnMyProfile();
 }
 
 function time() {
@@ -112,5 +114,6 @@ if (window.location.pathname === '/edit-profile.html') {
 if (window.location.pathname === '/my-profile.html') {
     console.log('my-profile.html');
     manageProfilePage();
+    orderHistoryBtn();
 }
 ///////////////////////////////////////////////////////////////

@@ -14,7 +14,7 @@ export function manageProfilePage() {
         console.log("Loaded currentUser:", currentUser); // Debugging line
 
         if (currentUser) {
-            document.querySelector(".logg-In").classList.add = ("d-none");
+            // document.querySelector(".logg-In").classList.add = ("d-none");
 
             profileName.textContent = currentUser.name;
             profileEmail.textContent = currentUser.email;
