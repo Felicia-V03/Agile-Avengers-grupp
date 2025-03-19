@@ -170,13 +170,13 @@ function latestOrderDisplay(order) {
         listItem.style.marginTop = '.5rem'
         orderList.appendChild(listItem);
 
-        totalSum += item.Price * item.Antal;
+        totalSum += (item.Price * item.Antal) * 112 / 100;
     });
 
     orderContainer.appendChild(orderList);
 
     const totalElement = document.createElement('p');
-    totalElement.textContent = `Totalt: ${totalSum} SEK`;
+    totalElement.textContent = `Totalt: ${totalSum.toFixed(0)} SEK`;
     totalElement.style.fontWeight = 'bold'; 
     const totalContainer = document.querySelector('.total')
     totalContainer.style.marginTop = '1rem'
