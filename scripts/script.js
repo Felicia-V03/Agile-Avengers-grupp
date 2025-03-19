@@ -5,6 +5,7 @@ import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, fin
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
+import { getLatestOrder } from "../components/receipt.js";
 import { showOrderDetails } from "../modules/orderHistory.js";
 
 
@@ -64,7 +65,8 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     console.log('receipt.html');
     getCart();
     newOrderBtn();
-    randomOrderNmbr();
+    getLatestOrder();
+
 
 } else if(window.location.pathname === '/find-us.html') {
     console.log('find-us.html');
