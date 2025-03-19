@@ -116,3 +116,29 @@ export async function registerButton() {
     });
     
 }
+
+export async function orderHistoryBtn() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".order-history-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "order-history.html";
+            });
+        }
+    });
+    
+}
+
+export async function returnMyProfile() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const aboutBtn = getElement(".order-h-btn");
+        
+        if (aboutBtn) {
+            aboutBtn.addEventListener("click", () => {
+                window.location.href = "my-profile.html";
+            });
+        }
+    });
+    
+}
