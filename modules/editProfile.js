@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileInput = document.getElementById("mobile");
     const passwordInput = document.getElementById("password");
     const saveBtn = document.querySelector(".save-btn");
+    const backArrow = document.querySelector(".back-arrow"); // ✅ Select the back arrow
+    
+    
+    // ✅ Add event listener to the back arrow
+    if (backArrow) {
+        backArrow.addEventListener("click", function () {
+            window.location.href = "my-profile.html";
+        });
+    }
+
 
     if (!nameInput || !emailInput || !mobileInput || !passwordInput || !saveBtn) {
         console.error("One or more input elements not found.");
