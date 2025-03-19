@@ -1,7 +1,7 @@
 import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
 import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
-import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton, registerButton, loginButton } from "../modules/button.js"
+import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton, registerButton } from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
@@ -103,7 +103,6 @@ if (window.location.pathname === '/log-in.html') {
     console.log('log-in.html');
     loginUser();
     registerButton();
-    loginButton();
 
 }
 if (window.location.pathname === '/edit-profile.html') {

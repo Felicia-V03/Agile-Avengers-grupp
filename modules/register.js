@@ -88,6 +88,7 @@ export function registerUser() {
                     email: emailInput.value.trim(),
                     mobile: mobileInput.value.trim(),
                     password: passwordInput.value.trim(),
+                    role: "user",
                 };
 
                 let users = JSON.parse(localStorage.getItem("users")) || [];

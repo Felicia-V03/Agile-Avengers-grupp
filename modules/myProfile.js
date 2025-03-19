@@ -14,12 +14,20 @@ export function manageProfilePage() {
         console.log("Loaded currentUser:", currentUser); // Debugging line
 
         if (currentUser) {
+            document.querySelector(".logg-In").classList.add = ("d-none");
+
             profileName.textContent = currentUser.name;
             profileEmail.textContent = currentUser.email;
             profileMobile.textContent = currentUser.mobile;
             
             // Ensure profilePic is set correctly
             profileImage.src = currentUser.profilePic ? `./assets/${currentUser.profilePic}` : "./assets/default.png";
+        
+            if (currentUser.role === "admin") {
+                profileName.textContent = currentUser.name + "";
+                
+            }
+        
         } else {
             profileName.textContent = "Guest";
             profileEmail.textContent = "Not logged in";
