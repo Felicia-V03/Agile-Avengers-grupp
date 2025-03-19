@@ -5,18 +5,11 @@ export function getCart() {
 
         const inCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        if (inCart.length === 0) {
-          const p = document.createElement('p');
-          p.textContent = 'No items added yet';
-          p.classList.add('no-items')
-          const orderContainer = document.querySelector('.order-list');
-          orderContainer.appendChild(p);
-        } else {
-          inCart.forEach(menu => {
-              orderCard(menu);
-          });
-        }
-        totalSum()
+        inCart.forEach(menu => {
+            orderCard(menu);
+        });
+
+        totalSum();
     });
 }
 
@@ -120,6 +113,7 @@ function totalSum() {
     } else {
         console.log('Varukorgen är tom');
         document.querySelector('.order-summary').textContent = 'Varukorgen är tom';
+        document.querySelector('.order-btn').classList.remove('money-btn');
         return {
             totalPrice: 0,
         };

@@ -1,6 +1,4 @@
-
 export function timeLeft(minutes) {
-
     let seconds = minutes * 60;
 
     let timeLeftMsg = document.querySelector('#timeLeftMsg');
@@ -37,4 +35,37 @@ export function randomOrderNmbr() {
     if (confirmationElement) {
         confirmationElement.textContent = `#${orderNumber}`;
     }
+
+    saveOrderToHistory(orderNumber);
+}
+
+function saveOrderToHistory(orderNumber) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+    const now = new Date();
+    const dateFormatter = new Intl.DateTimeFormat('sv-SE', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
+
+    const formattedDateTime = dateFormatter.format(now);
+
+    const newOrder = {
+        orderNumber: orderNumber,
+        items: cartItems,
+        date: formattedDateTime,
+    };
+
+    orderHistory.push(newOrder);
+
+    localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+    console.log('Order saved to history:', newOrder);
+
+    localStorage.setItem('cart', JSON.stringify([]));
 }

@@ -1342,3 +1342,121 @@
 .menu-button:hover {
     background-color:var(--button-hover);
 }
+
+/* -------ORDERHISTORIK------- */
+
+.wrapper-order-history {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    background-image: url(./assets/leaves-bg.png);
+    background-position: center;
+}
+
+.order-h-container {
+    width: 100%;
+    height: auto;
+    background-color: rgba(96, 88, 88, 1);
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+
+.order-h-header {
+    color: var(--primary-text-color);
+    text-align: center;
+    font-family: var(--primary-font);
+    padding: 2rem 0 2rem 0;
+    border-bottom: dotted var(--primary-button-color) 2px;
+}
+
+.order-h-title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.order-h-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-button-color);
+    align-items: center;
+    border-bottom: dotted var(--primary-button-color) 2px;
+    color: var(--primary-text-color);
+}
+
+.order-nmbr {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.order-date {
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+.order-details {
+    display: none;
+    background-color: var(--secondary-text-color);
+    padding: 1rem;
+    color: var(--primary-text-color);
+    font-family: var(--primary-font);
+    border-bottom: dotted var(--primary-button-color) 2px;
+}
+
+.order-more-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 0 .5rem 0;
+}
+
+.cart-order {
+    padding: 10px;
+    padding-left: 15px;
+    border-left: var(--secondary-bg-color) 1px solid;
+}
+
+.order-h-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-text-color);
+    color: var(--primary-button-color);
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+}
+
+.order-h-moms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-h-btn-container {
+    display: flex; 
+    justify-content: center;
+    margin-top: auto;
+}
+
+.order-h-btn {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    color: var(--primary-text-color);
+    background-color: var(--primary-button-color);
+    border: none;
+    border-radius: 4px;
+    height: 5rem;
+    width: 100%;
+}
+
+
+
