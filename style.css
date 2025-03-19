@@ -584,8 +584,7 @@
 .receipt-btn:hover {
     background: var(--button-hover);
 }
-
-/* ---------- About us about_us.html ---------- */
+/* ============ About us about_us.html ================= */
 .about-container {
     background: var(--secondary-bg-color);
     width: 100%;
@@ -648,58 +647,6 @@
     border-radius: 5px;
 }
    
-.about-btn {
-    display: block;
-    width: 100%;
-}
-
-.about-btn:hover {
-    background: var(--button-hover);
-}
-
-/* ============ About us about_us.html ================= */
-.about-container {
-    background: var(--secondary-bg-color);
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* Ensures full height */
-    justify-content: space-between;
-    color: var(--secondary-text-color);
-    line-height: 24px;
-}
-
-/* About Box */
-.about-box {
-    font-family: var(--primary-font);
-    background: white;
-    border-radius: 5px;
-    text-align: center;
-    width: 100%; /* Make it more compact */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-logo {   
-    margin-top: -4px;
-    width: 50px;
-}
-
-.about-title {
-    margin-top: -4px;
-    color: var(--secondary-text-color)
-}
-
-.about-img img{
-    margin-top: -4px;
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: -5px;
-}
-
 .more-text {
     display: none;
   }
@@ -731,9 +678,6 @@
     content: " Läs mindre";
   }
   
-
-
-
 /*====contact us part =====*/
 
 .contact-us {
@@ -776,12 +720,12 @@
 .about-btn {
     display: block;
     width: 100%;
-    background-color:var(--primary-button-color);
 }
 
 .about-btn:hover {
     background: var(--button-hover);
 }
+
 
 /*=================log-in.html Page===========*/
 
@@ -802,11 +746,11 @@
 
 
 .back-arrow {
+    color: var(--primary-button-color);
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 2rem;
-    color: #353131;
+    font-size: 2.5rem;
     cursor: pointer;
 }
  
@@ -818,7 +762,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 300px;
+    width: 382px;
 }
 
 /* Logo */
@@ -966,7 +910,7 @@
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    width: 350px;
+    width: 382px;
 }
 
 .register-title {
@@ -1144,6 +1088,7 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
     margin-top: 1rem;
     display: flex;
@@ -1376,6 +1321,28 @@
 }
 
 
+
+/*===========vår meny button===========*/
+/*
+.menu-button {
+    display: block;
+    width: 100%px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    background-color: var(--primary-button-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color:var(--button-hover);
+}
+
 /* -------ORDERHISTORIK------- */
 
 .wrapper-order-history {
@@ -1490,5 +1457,6 @@
     height: 5rem;
     width: 100%;
 }
+
 
 
