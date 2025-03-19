@@ -104,7 +104,6 @@ export async function findUsButton() {
     
 }
 
-
 export async function registerButton() {
     document.addEventListener("DOMContentLoaded", () => {
         const aboutBtn = getElement(".register-btn");
@@ -112,19 +111,6 @@ export async function registerButton() {
         if (aboutBtn) {
             aboutBtn.addEventListener("click", () => {
                 window.location.href = "register.html";
-            });
-        }
-    });
-    
-}
-
-export async function loginButton() {
-    document.addEventListener("DOMContentLoaded", () => {
-        const aboutBtn = getElement(".login-btn");
-        
-        if (aboutBtn) {
-            aboutBtn.addEventListener("click", () => {
-                window.location.href = "my-profile.html";
             });
         }
     });

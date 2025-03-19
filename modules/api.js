@@ -41,5 +41,3 @@ export async function fetchUser() {
 
   oData.user = users.users;
 }
-
-
