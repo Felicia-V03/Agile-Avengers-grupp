@@ -23,5 +23,3 @@ export function loadProfile() {
     }
 });
 }
-// // ✅ Ensure the function runs when the script loads
-// loadProfile();
