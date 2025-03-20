@@ -1,0 +1,41 @@
+Mötesprotokoll (2025-03-18)
+
+Närvarande
+* Saga
+* Felicia
+* Thapa
+* Sunsanee
+
+Protokoll
+* Vad gjorde du igår?
+* Vad ska du göra idag?
+* Finns det några hinder?
+
+Saga
+
+* Fixade errors som fanns i konsolen efter att vi mergade. La även in några protokoll från tidigare dagar. Gjorde en firma-skiss på hitta oss.
+* Skapa och jobba med hitta oss-sidan, där vi ska använda api från google maps.
+* Har lite problem med api-nyckeln men ska försöka fixa det.
+
+Felicia
+
+* Sjuk igår.
+* Jobba med orderhistorik så att det fungerar med localstorage. Lägga till datum och tid på kvittot. Ändra loggan så att den matchar/är likadan på alla sidor.
+* Lite problem med att få bort antal-pilarna på kvittot.
+
+Thapa
+
+* Jobbade med att fixa css på olika sidor och rensade upp lite onödig kod.
+* Fortsätta med gårdagens jobb och fixa tillbaka-pilar på login och registrering.
+* Inga hinder just nu utan ska bara fortsätta jobba på.
+
+Sunsanee
+
+* Skapade och arbetade med landingpage.
+* Förbättra landingpage och fixa lite errors som kom upp med den.
+* Har haft lite problem med att pusha men annars inga hinder just nu.
+
+
+Övrigt
+Vi jobbar på med våra tilldelade uppgifter. Om någon fastnar skriver vi på discord och ses på teams så vi kan hjälpas åt. 
+Vi diskuterade hur vi skulle få in att man som inloggad kund kan se sina tidigare beställningar och enkelt kunna beställa samma igen. Då kom vi fram till att vi ska ha med den möjligheten på beställningshistorik-sidan. Man klickar på en kundvagns-icon som finns under beställningen och då skickas man direkt till kundvagnen med dom produkterna i. Vi pratade också om historik för gäst-användare. Vi tänker att det sparas i en vanlig historik om man inte är registrerad eller inloggad.

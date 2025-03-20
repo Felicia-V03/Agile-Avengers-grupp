@@ -1,0 +1,41 @@
+Mötesprotokoll (2025-03-19)
+
+Närvarande
+* Saga
+* Felicia
+* Thapa
+* Sunsanee
+
+Protokoll
+* Vad gjorde du igår?
+* Vad ska du göra idag?
+* Finns det några hinder?
+
+Saga
+
+* Skapade och gjorde färdigt hitta oss-sidan och skapade även orderhistorik-sidan men bara html och css.
+* Fixa så att innehållet på kvittot skrivs ut på rätt sätt och ser bra ut. Ska även försöka få rätt saker att skrivas ut i orderhistorik.
+* Inga hinder just nu.
+
+Felicia
+
+* Jobbade vidare med orderhistorik och localstorage.
+* Färdigställa orderhistoriken så att den funkar som den ska och sen kanske börja med administratör-delen.
+* Har lite problem med att få localstorage att fungera som det ska.
+
+Thapa
+
+* Jobbade med smådetaljer och la till tillbakapilar på login och registrering.
+* Lägga till en meny-knapp på landingpage så att man enkelt kan hitta till menyn. 
+* Inga hinder just nu utan ska bara fortsätta jobba på.
+
+Sunsanee
+
+* Har förbättrat landingpage då det fanns lite errors. La även till en effekt på produkt-filtreringen så man tydligare ser vilken man har tryckt på. La till samma funktion på about-us som på landingpage med bildspelet.
+* Fixa css på login så att den matchar dom andra sidorna. Ska även ta bort verify delen på login då det räcker med en länk till det.
+* Inga hinder.
+
+
+Övrigt
+Vi jobbar på med våra tilldelade uppgifter. Om någon fastnar skriver vi på discord och ses på teams så vi kan hjälpas åt.
+Vi diskuterade hur vi ska göra med administratör-user storyn och kom fram till att man när man loggar in så kontrolleras det om man är user eller admin. Om man är user kommer man bara till den vanliga appen, men om man är admin så har man tillgång till sin profil där det ska finnas en knapp som leder till aktiva ordrar, så man kan ha koll på vad som har beställts.
