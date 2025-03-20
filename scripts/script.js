@@ -80,8 +80,8 @@ else if(window.location.pathname === '/order-history.html') {
     showOrderDetails();
     showOrderHistory();
     returnMyProfile();
+    
 }
-
 function time() {
     setTimeout(function() {
         window.location.href = "landing-page.html";
@@ -116,4 +116,4 @@ if (window.location.pathname === '/my-profile.html') {
     manageProfilePage();
     orderHistoryBtn();
 }
-///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////

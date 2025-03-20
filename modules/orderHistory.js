@@ -1,3 +1,6 @@
+import { getCart } from "../components/getcart.js";
+import { getElement, createElement } from "../utils/domUtils.js";
+
 export function showOrderDetails() {
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.order-h-item').forEach((order, index) => {
@@ -65,23 +68,29 @@ export function showOrderHistory() {
             orderDetails.classList.add('order-details');
             orderDetails.style.display = 'none';
 
+            const orderDatailList = createElement('ol');
+            orderDatailList.classList.add('order-detail__list');
+
             order.items.forEach(item => {
-                const itemDetail = document.createElement('section');
-                itemDetail.classList.add('order-more-details');
-
-                const itemName = document.createElement('p');
-                itemName.textContent = item.Name;
-
-                const itemQuantity = document.createElement('p');
-                itemQuantity.textContent = `x${item.Antal}`;
-
-                const itemPrice = document.createElement('p');
-                itemPrice.textContent = `${item.Price} SEK`;
-
-                itemDetail.appendChild(itemName);
-                itemDetail.appendChild(itemQuantity);
-                itemDetail.appendChild(itemPrice);
-                orderDetails.appendChild(itemDetail);
+                let listItem = document.createElement('li');
+                let orderInfo = createElement('div');
+                let productName = createElement('P');
+                let amountItem = createElement('p');
+                let unitPrice = createElement('p');
+            
+                orderInfo.classList.add('order-info');
+                productName.classList.add('product-name');
+                productName.textContent = `${item.Name}`;
+                amountItem.classList.add('amount');
+                amountItem.textContent = `${item.Antal} st.`;
+                unitPrice.classList.add('unit-price');
+                unitPrice.textContent = `${item.Price} SEK`;
+                orderDetails.appendChild(orderDatailList);
+                orderDatailList.appendChild(listItem)
+                listItem.appendChild(orderInfo);
+                orderInfo.appendChild(productName);
+                orderInfo.appendChild(amountItem);
+                orderInfo.appendChild(unitPrice);
             });
 
             const totalSum = order.items.reduce((sum, item) => sum + item.Price * item.Antal, 0);
