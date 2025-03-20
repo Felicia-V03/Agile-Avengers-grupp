@@ -1050,7 +1050,6 @@
 .profile-info {
     font-size: 18px;
     margin: 0.5rem 0;
-    padding-left: 2rem;
     font-weight: 500;
     font-family: var(--secondary-font);
     text-align: left;
@@ -1430,6 +1429,8 @@
 }
 
 .order-details {
+    width: 90%;
+    transform: translateX(25px);
     display: none;
     background-color: var(--secondary-text-color);
     padding: 1rem;
@@ -1452,6 +1453,8 @@
 }
 
 .order-h-total {
+    width: 350px;
+    transform: translateX(-25px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
