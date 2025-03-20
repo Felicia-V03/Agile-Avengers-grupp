@@ -41,8 +41,6 @@ function updateUserOrderHistory(userId, latestOrder) {
 
     localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
-    // console.log(`Uppdaterad orderhistorik för användare ${userId}.`);
-
     const userList = JSON.parse(localStorage.getItem('users')) || [];
 
     const userIndex = userList.findIndex(user => 

@@ -14,6 +14,7 @@ export function showOrderDetails() {
     });
 }
 
+
 export function showOrderHistory() {
     document.addEventListener('DOMContentLoaded', () => {
         const orderContainer = document.querySelector('.order-h-items');
@@ -116,7 +117,22 @@ export function showOrderHistory() {
             orderItem.addEventListener('click', () => {
                 orderDetails.style.display = orderDetails.style.display === 'none' ? 'block' : 'none';
             });
+
+            cartIcon.addEventListener('click', () => {
+                addOrderToCart(order.items);
+            });
         });
     });
 }
 
+function addOrderToCart(items) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    items.forEach(item => {
+        cart.push(item);
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    window.location.href = "my-order.html";
+}
