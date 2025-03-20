@@ -1,3 +1,5 @@
+import { createElement } from "../utils/domUtils.js";
+
 export function getLatestOrder() {
     const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
 
@@ -82,17 +84,32 @@ function latestOrderDisplay(order) {
     orderDate.style.fontWeight = 'bold'
     orderContainer.appendChild(orderDate);
 
-    const orderList = document.createElement('ul');
+    const orderList = document.createElement('ol');
+    orderList.classList.add('order-summary-info');
     
 
     let totalSum = 0;
 
     order.items.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.Name} - Antal: ${item.Antal} - Pris: ${item.Price} SEK`;
-        listItem.style.listStyle = 'none'
-        listItem.style.marginTop = '.5rem'
+        let listItem = document.createElement('li');
+        let orderInfo = createElement('div');
+        let productName = createElement('P');
+        let amountItem = createElement('p');
+        let unitPrice = createElement('p');
+       
+        orderInfo.classList.add('order-info');
+        productName.classList.add('product-name');
+        productName.textContent = `${item.Name}`;
+        amountItem.classList.add('amount');
+        amountItem.textContent = `${item.Antal} st.`;
+        unitPrice.classList.add('unit-price');
+        unitPrice.textContent = `${item.Price} SEK`;
         orderList.appendChild(listItem);
+        listItem.appendChild(orderInfo);
+        orderInfo.appendChild(productName);
+        orderInfo.appendChild(amountItem);
+        orderInfo.appendChild(unitPrice);
+        
 
         totalSum += (item.Price * item.Antal) * 112 / 100;
     });

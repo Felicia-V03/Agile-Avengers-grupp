@@ -63,7 +63,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
 //Till kvittor sidan visa upp odersnummer och information
 } else if(window.location.pathname === '/receipt.html') {
     console.log('receipt.html');
-    getCart();
+    openAndCloseNav();
     newOrderBtn();
     getLatestOrder();
 
