@@ -97,27 +97,7 @@ export function loginUser() {
             }
         });
 
-        // 📌 Verify button: Check email or phone number
-        // verifyBtn.addEventListener("click", function () {
-        //     let value = forgotPassword.value.trim();
-        //     let numericValue = value.replace(/\D/g, ""); // Remove spaces for validation
-
-        //     if (value.includes("@")) {
-        //         clearError(forgotPassword);
-        //         showError(forgotPassword, "Login detail sent, change password", "green");
-        //         forgotPassword.value = ""; // Clear input
-        //     } else if (/^\d{10}$/.test(numericValue)) {
-        //         if (/^(\d)\1{9}$/.test(numericValue)) {
-        //             showError(forgotPassword, "Number does not exist");
-        //         } else {
-        //             clearError(forgotPassword);
-        //             showError(forgotPassword, "Code sent, change your password", "green");
-        //             forgotPassword.value = ""; // Clear input
-        //         }
-        //     } else {
-        //         showError(forgotPassword, "Enter a valid email or 10-digit number");
-        //     }
-        // });
+        
     });
 }
 

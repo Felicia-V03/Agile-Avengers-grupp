@@ -8,7 +8,7 @@ export function initSlider() {
     let slides = getElements(".slide");
     
     if (slides.length === 0) {
-        console.error("🚨 Inga slides hittades! Kontrollera att HTML-koden är korrekt.");
+        console.error("Inga slides hittades! Kontrollera att HTML-koden är korrekt.");
         return;
     }
 
@@ -21,7 +21,7 @@ export function showSlides(index) {
     let dots = getElements(".dot");
 
     if (slides.length === 0) {
-        console.error("🚨 Fel: Det finns inga slides att visa.");
+        console.error("Fel: Det finns inga slides att visa.");
         return;
     }
 
