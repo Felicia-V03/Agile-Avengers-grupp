@@ -150,9 +150,9 @@
     font-family: var(--primary-font);
 }
 .menu-nav_items:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     cursor: pointer;
-    
+    border: var(--primary-text-color) solid 2px;
 }
 
 .menu-body {
@@ -679,7 +679,7 @@
     text-align: center;
     margin-top: 10px;
     cursor: pointer;
-    color: blue;
+    color: var(--secondary-text-color);
     text-decoration: underline;
   }
   
@@ -1241,6 +1241,9 @@
 }
 
 /*---------- Landing Page ------------*/
+
+
+
 .landing-page {
     background-color: #8ED8BF; /* Light green background */
     background-image: url("assets/leaves-bg.png"); /* Background image */
@@ -1343,6 +1346,7 @@
     margin: 1rem 0;
     padding: 0 1rem;
 }
+
 
 
 
