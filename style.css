@@ -78,6 +78,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .menu-head {
@@ -1097,7 +1098,7 @@
 }
 
 /* Buttons - Aligned to Profile Box */
-.support-btn, .order-history-btn, .menu-btn {
+.support-btn, .order-history-btn, .menu-btn, .log-out-btn, .log-in-btn {
     width: 100%; /* Matches profile box width */
     max-width: 400px;
     background: var(--primary-button-color);
@@ -1115,6 +1116,10 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.d-none {
+    display: none;
 }
 
 

@@ -22,6 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 }
 
+export function hideLogin() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const logInLink = document.querySelector(".logg-In");
+        const currentUser = localStorage.getItem("currentUser");
+    
+        if (currentUser && logInLink) {
+            logInLink.classList.add("d-none");
+        }
+    });
+}
+
+
 export async function dropDownStatus() {
     const cartIcon = document.querySelector(".cart");
     const dropDownContent = document.querySelector(".order-container");

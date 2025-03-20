@@ -1,6 +1,6 @@
 import { getMenu } from "../components/getMenu.js"
 import { getCart } from "../components/getcart.js"
-import { openAndCloseNav, dropDownStatus } from "../modules/navMenu.js";
+import { openAndCloseNav, dropDownStatus, hideLogin } from "../modules/navMenu.js";
 import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, findUsButton, registerButton, orderHistoryBtn, returnMyProfile } from "../modules/button.js"
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
@@ -14,7 +14,7 @@ import { loadProfile } from "../modules/profile.js";
 import { registerUser } from "../modules/register.js";
 import { loginUser } from "../modules/logIn.js";
 import { editUserProfile } from "../modules/editProfile.js";
-import { manageProfilePage } from "../modules/myProfile.js";
+import { manageProfilePage, loginLogout } from "../modules/myProfile.js";
 ////////////////////////////////////////////////////////////////////////
 
 //Till index sidan då visa den Trailers och Recommendations samt function för att söka
@@ -28,6 +28,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     openAndCloseNav();
     findUsButton();
     initSlider();
+    hideLogin();
     
 
 //Till bår meny sidan för visa våran meny och hambergare meny som visa about us knappen
@@ -37,6 +38,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     openAndCloseNav();  
     dropDownStatus();
     cartBtn();
+    hideLogin();
 
 //Till about us sidan visa information om våran app
 } else if(window.location.pathname === '/about-us.html') {
@@ -115,5 +117,6 @@ if (window.location.pathname === '/my-profile.html') {
     console.log('my-profile.html');
     manageProfilePage();
     orderHistoryBtn();
+    loginLogout()
 }
 ///////////////////////////////////////////////////////////////
