@@ -84,7 +84,7 @@ export function registerUser() {
 
             if (isValid) {
                 const newUser = {
-                    name: nameInput.value.trim(),
+                    username: nameInput.value.trim(),
                     email: emailInput.value.trim(),
                     mobile: mobileInput.value.trim(),
                     password: passwordInput.value.trim(),

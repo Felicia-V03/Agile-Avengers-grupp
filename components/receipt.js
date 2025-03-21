@@ -21,52 +21,55 @@ export function getLatestOrder() {
         console.log(`- ${item.Name} (Antal: ${item.Antal}) - Pris: ${item.Price} SEK`);
     });
 
+    if (window.location.pathname === '/receipt.html') {
+        latestOrderDisplay(latestOrder);
+    }
+
+    return latestOrder;
+}
+
+export function checkUser() {
     const loggedInUserId = localStorage.getItem('currentUser');
+    const latestOrder = getLatestOrder(); // Hämta den senaste ordern
+
+    if (!latestOrder) {
+        console.log("Ingen senaste order att visa.");
+        return;
+    }
 
     if (loggedInUserId) {
         updateUserOrderHistory(loggedInUserId, latestOrder);
     }
-
-    latestOrderDisplay(latestOrder);
 }
 
-function updateUserOrderHistory(userId, latestOrder) {
-    const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-
-    if (!currentUser.orderHistory) {
-        currentUser.orderHistory = [];
-    }
-
-    currentUser.orderHistory.unshift(latestOrder);
-
-    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
+function updateUserOrderHistory(loggedInUserId, latestOrder) {
     const userList = JSON.parse(localStorage.getItem('users')) || [];
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-    const userIndex = userList.findIndex(user => 
-        user.username === currentUser.username ||
-        user.email === currentUser.email ||
-        user.telefon === currentUser.telefon ||
-        user.password === currentUser.password
-    );
+    // Hitta den aktuella användaren
+    const userIndex = userList.findIndex(user => user.id === currentUser.id); // anta att användaren har ett id-fält
 
     if (userIndex !== -1) {
-        userList[userIndex] = {
-            ...userList[userIndex],
-            orderHistory: currentUser.orderHistory
-        };
-    } else {
-        userList.push({
-            username: user.username,
-            email: user.email,
-            telefon: user.telefon,
-            password: user.password,
-            orderHistory: currentUser.orderHistory
-        });
-    }
+        if (!currentUser.orderHistory) {
+            currentUser.orderHistory = [];
+        }
 
-    localStorage.setItem('users', JSON.stringify(userList));
+        // Lägg till den senaste ordern till användarens orderhistorik
+        currentUser.orderHistory.unshift(latestOrder);
+
+        // Uppdatera användaren i användarlistan
+        userList[userIndex] = currentUser;
+        
+        // Spara den uppdaterade användarlistan i localStorage
+        localStorage.setItem('users', JSON.stringify(userList));
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+        console.log("Orderhistorik uppdaterad för användaren.");
+    } else {
+        console.log("Användare hittades inte.");
+    }
 }
+
 
 function latestOrderDisplay(order) {
     const orderContainer = document.querySelector('.order-list');
