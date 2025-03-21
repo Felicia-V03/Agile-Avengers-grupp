@@ -5,7 +5,7 @@ import { returnBtn, moneyBtn, receiptBtn, cartBtn, newOrderBtn, aboutButton, fin
 import { timeLeft, randomOrderNmbr } from "../components/eta.js";
 import { loadGoogleMaps } from "../modules/findUs.js";
 import { initSlider } from "../components/landing-page.js";
-import { getLatestOrder } from "../components/receipt.js";
+import { getLatestOrder, checkUser } from "../components/receipt.js";
 import { showOrderDetails, showOrderHistory } from "../modules/orderHistory.js";
 
 
@@ -21,7 +21,6 @@ import { manageProfilePage, loginLogout } from "../modules/myProfile.js";
 if(window.location.pathname === '/' || window.location.pathname === '/Index.html') {
     console.log('index.html');
     time();
-
 
 } else if(window.location.pathname === '/landing-page.html') {
     console.log('landing-page.html');
@@ -53,6 +52,7 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     randomOrderNmbr();
     newOrderBtn();
     receiptBtn();
+    checkUser();
 
 //Till order sidan visa upp odersnummer och information
 } else if(window.location.pathname === '/my-order.html') {

@@ -16,9 +16,7 @@ export function manageProfilePage() {
         // console.log("Loaded currentUser:", currentUser); // Debugging line
 
         if (currentUser) {
-            // document.querySelector(".logg-In").classList.add = ("d-none");
-
-            profileName.textContent = currentUser.name;
+            profileName.textContent = currentUser.username;
             profileEmail.textContent = currentUser.email;
             profileMobile.textContent = currentUser.mobile;
             
@@ -26,8 +24,11 @@ export function manageProfilePage() {
             profileImage.src = currentUser.profilePic ? `./assets/${currentUser.profilePic}` : "./assets/default.png";
         
             if (currentUser.role === "admin") {
-                profileName.textContent = currentUser.name + "";
-                
+                console.log("User is an admin");
+                                
+            } else {
+                console.log("User is not an admin");
+
             }
         
         } else {
@@ -57,9 +58,7 @@ export function manageProfilePage() {
                 console.log("Contact Us button clicked");
                 window.location.href = "about-us.html";
             });
-        }
-
-        
+        }        
     });
 }
 
