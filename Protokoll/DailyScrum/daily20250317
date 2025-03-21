@@ -1,0 +1,33 @@
+Mötesprotokoll (2025-03-17)
+
+Närvarande
+* Saga
+* Thapa
+* Sunsanee
+
+Protokoll
+* Vad gjorde du igår?
+* Vad ska du göra idag?
+* Finns det några hinder?
+
+Saga
+
+* Gjorde en enkel timer-funktion som bara visas på eta-sidan när man befinner sig på den. Skulle vilja utveckla den mer så att man kan använda den till senare funktioner.
+* Ska börja fixa till några errors och problem som krockade när vi mergade koden för login osv. Sen börja med här finns vi sidan.
+* Får se om det fixar sig med dom errors som uppstod när vi mergade men annars inga hinder just nu.
+
+Thapa
+
+* Har i stort sett gjort klart login, registrering, my profile, även att man kan ändra profiluppgifter. La också till några detaljer på about-us, som tex sociala medier och kontakta oss. Och pushat mergad ihop det med dev.
+* Fixa med css på dom nytillagda sidorna som hade blivit fel. Ska även städa lite i koden och rensa bort sånt som inte ska vara med längre. 
+* Inga hinder just nu utan ska bara fortsätta jobba på.
+
+Sunsanee
+
+* Fixade så att order numret även visas på kvittot. Ändrade stylingen på about-us så att den blev snyggare och mer realistik. La även till moms i uträkningen av alla produkter i kundvagen.
+* Skapa landingpage som ska innehålla bilder och erbjudanden, och börja jobba med den.
+* Inga hinder för tillfället.
+
+Övrigt
+Som vanligt jobbar på med våra tilldelade uppgifter och pushar upp ofta så det är många småfunktioner och detaljer som ska fixas. Så vi håller varandra uppdateraade under dagen så man vet när vi måste dra ner den senaste versionen. Och som vanligt om någon fastnar skriver vi på discord och ses på teams så vi kan hjälpas åt.
+Vi diskuterade även många olika ideer på hur vi skulle kunna göra dom nya user stories. Men vi håller oss mycket till våran sprint planning och får se hur det fungerar efter vägen.

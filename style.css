@@ -1,0 +1,1495 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --primary-font: "Fira Sans";
+    --secondary-font: "Roboto";
+    --primary-bg-color: #8ED8BF;
+    --secondary-bg-color: #605858;
+
+    --primary-button-color: #353131;
+    --primary-text-color: #F4F3F1;
+    --secondary-text-color: #605858;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+/* ---------- Startsidan 3s Index.html ---------- */
+.strandad-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-bg-color);
+    background-image: url(./assets/leaves-bg.png);
+    background-position: center;
+}
+
+.logo-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo-image {
+    width: 10rem;
+    height: auto;
+}
+
+/* ---------- Meny Our_menu.html ---------- */
+.menu-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu-container {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    border-radius: 0.5rem;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.menu-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--primary-font);
+    padding: 1.5rem 1rem;
+    border-bottom: 2px dotted var(--primary-button-color);
+}
+
+.menu-head article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-container h1 {
+    align-self: flex-start;
+    font-size: 2rem;
+}
+
+.cart {
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    position: relative;
+    cursor: pointer;
+
+}
+
+.menu-container img {
+    aspect-ratio: 1/1;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--primary-text-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.antal-siffran {
+    position: absolute;
+    top: -1rem;
+    right: -0.9rem;
+    background-color: red;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 2rem;
+    height: auto;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.menu-nav_items {
+    background-color: var(--primary-button-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    font-family: var(--primary-font);
+}
+.menu-nav_items:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    border: var(--primary-text-color) solid 2px;
+}
+
+.menu-body {
+    width: 100%;
+
+}
+
+.menu-items_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    border-bottom: 2px dotted var(--primary-button-color);
+
+}
+
+.menu-text {
+    justify-self: flex-end;
+    width: 80%;
+    font-family: var(--primary-font);
+}
+
+.plus-btn {
+    aspect-ratio: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    font-size: 2rem;
+    border: none;
+}
+
+.first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.second-row {
+    font-size: 0.6em;
+}
+
+/* Navigationsmeny */
+
+.navigation-meny {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem;
+    background: var(--secondary-bg-color);
+    opacity: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%); /* Gömmer menyn utanför skärmen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.show-menu {
+    transform: translateY(0);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+
+.nav-links a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 32px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    padding: 2rem;
+    cursor: pointer;
+    border-bottom: solid var(--primary-text-color) 1px;
+}
+
+.close-nav {
+    position: absolute;
+    top: 2.5rem; 
+    right: 1rem; 
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* ---------- Kundvagn my_order.html ---------- */
+.wrapper-order {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-text-color);
+}
+
+.my-icon {
+    width: 15%;
+}
+
+.fa-arrow-left {
+    color: var(--primary-button-color);
+    font-size: 2.5rem;
+}
+
+.header-title {
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    color: var(--primary-button-color);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+.order-list {
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--primary-font);
+    font-size: 19px;
+    width: 100%;
+}
+
+.no-items {
+    text-align: center;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-button-color);
+    align-items: center;
+}
+
+.price {
+    font-family: var(--primary-font);
+}
+
+.quantity-container {
+    font-family: var(--primary-font);
+    text-align: center;
+}
+
+.quantity-btn {
+    border: none;
+    font-size: 20px;
+    background-color: var(--primary-text-color);
+    color: var(--primary-button-color);
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-button-color);
+    font-family: var(--primary-font);
+    width: 100%;
+}
+
+.order-btn {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    color: var(--primary-text-color);
+    background-color: var(--primary-button-color);
+    border: none;
+    border-radius: 4px;
+    height: 5rem;
+    margin-top: auto;
+}
+
+
+/* ---------- Bekrätrelse eta.html ---------- */
+.wrapper-eta {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-eta {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-eta {
+    width: 4.5rem;
+    padding: .5rem;
+    border: solid 2px var(--primary-text-color);
+    border-radius: 3px;
+}
+
+.img-container-eta {
+    display: flex;
+    justify-content: center;
+}
+
+.text-container-eta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin: 0 2rem 0 2rem;
+    color: var(--primary-text-color);
+    font-family: var(--primary-font);
+}
+
+.confirmation-msg {
+    font-size: 32px;
+    font-weight:500;
+}
+
+.time-left-msg {
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.confirmation-nmbr {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.button-container-eta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.normal-btn {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    color: var(--primary-text-color);
+    background-color: var(--primary-button-color);
+    border: none;
+    border-radius: 4px;
+    height: 5rem;
+}
+
+.white-btn {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    color: var(--primary-text-color);
+    background-color: transparent;
+    border: solid 2px var(--primary-text-color);
+    border-radius: 4px;
+    height: 5rem;
+}
+
+/* ---------- Kvittor receipt.html ---------- */
+.receipt-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.receipt-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Receipt Box */
+.receipt-box {
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%;
+   
+}
+
+
+.receipt-logo {
+    margin-top: 32px;
+    width: 50px;
+}
+
+.receipt-title {
+    font-family: var(--primary-font);
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--primary-button-color);
+    letter-spacing: 1px;
+}
+
+.order-number {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-button-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.order-list {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 10px 0px;
+    width: 100%;
+}
+.order-summary-info {
+    width: 80%;
+    margin: 1rem 3rem;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+    padding: 0.5rem 0;
+    text-align: left;
+   
+}
+.product-name {
+    width: 50%;
+    text-align: left;
+}
+.amount {
+    width: 20%;
+    text-align: right;
+}
+.unit-price {
+    width: 30%;
+    text-align: right;
+}
+
+.order-list li span:first-child {
+    background: var(--receipt-bg);
+    padding-right: 5px;
+    z-index: 1;
+}
+
+.order-list li span:last-child {
+    background: var(--receipt-bg);
+    padding-left: 5px;
+    z-index: 1;
+}
+
+
+.order-list small {
+    display: block;
+    font-size: 12px;
+    color: var(--primary-button-color);
+    text-align: left;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D1D1D1;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-button-color);
+    font-family: var(--primary-font);
+
+}
+
+.total-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.total-left small {
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--primary-button-color);
+    margin-top: 3px;
+    display: block;
+}
+
+.total-right {
+    text-align: right;
+    white-space: nowrap; /* Ensures "101 SEK" stays on the same line */
+}
+
+/* Button */
+.receipt-btn {
+    text-align: center;
+    width: 100%;
+  
+}
+
+.receipt-btn:hover {
+    background: var(--button-hover);
+}
+/* ============ About us about_us.html ================= */
+.about-container {
+    background: var(--secondary-bg-color);
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height */
+    justify-content: space-between;
+}
+
+
+.about-header {
+    width: 100%;
+    text-align: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* About Box */
+.about-box {
+    font-family: var(--primary-font);
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%; /* Make it more compact */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-logo {
+    margin-top: 20px;
+    width: 50px;
+}
+
+.about-title {
+    color: var(--primary-button-color);
+    margin-top: 1rem;
+}
+
+.about-text {
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    text-align: justify;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    padding: 10px; /* Adds space inside the content box */
+}
+.about-img img{
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+   
+.more-text {
+    display: none;
+  }
+  
+  .toggle:checked ~ .more-text {
+    display: block;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  .toggle-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    text-decoration: underline;
+  }
+  
+  /* Default text: Läs mer */
+  .toggle-btn::after {
+    content: " Läs mer";
+  }
+  
+  /* When checkbox is checked, show Läs mindre AFTER all content */
+  .toggle:checked ~ .more-text + .toggle-btn::after {
+    content: " Läs mindre";
+  }
+  
+/*====contact us part =====*/
+
+.contact-us {
+    width: 100%;
+    text-align: center;
+    margin: 1rem;
+    background: var(--secondary-bg-color);
+    border-radius: 5px;
+}
+
+.contact-title {
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    background: white;
+    padding: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Makes it as wide as the text container */
+    margin-bottom: -10px;
+}
+
+.contact-details a, .contact-details span {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+}
+
+/* ======button to lead to main menu ========*/
+.about-btn {
+    display: block;
+    width: 100%;
+}
+
+.about-btn:hover {
+    background: var(--button-hover);
+}
+
+
+/*=================log-in.html Page===========*/
+
+
+/* General Styling */
+.log-in-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.back-arrow {
+    color: var(--primary-button-color);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+ 
+
+/* Container for the login form */
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 382px;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+.title {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.login-form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Forgot Password Section */
+.forgot-text {
+    font-size: 12px;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    color: #0c04e4;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+}
+
+/* Forgot Password Input */
+#forgot-password {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+/* Register Section */
+.register-text {
+    font-size: 12px;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.register-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+/* Positioning the logo in the top-left corner */
+.top-left-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 64px; /* Adjust to match the design */
+    height: auto;
+}
+
+/* Styling for error messages */
+.error-text {
+    color: red;
+    margin-top: 0px;
+    font-size: 12px;
+
+}
+
+/* Success Message Styling */
+.success-text {
+    color: green !important;
+}
+
+.forgot-container {
+    display: flex;
+    flex-direction: column; /* Stack input & button vertically */
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.verify-btn {
+    width: 100%;
+    background: #353131; /* Same as Log In and Register */
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px; /* Adds some space */
+}
+
+.verify-btn:hover {
+    background-color: black; /* Darker on hover */
+}
+
+
+/*============== register.html page ==================*/
+/* Register Page Styling */
+.register-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.register-container {
+    background: #d3d3d3; /* Light gray */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 382px;
+}
+
+.register-title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.register-form label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight:400;
+    margin-bottom: 0.2rem;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.register-btn {
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    background:var(--primary-button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: black;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.gender-selection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.gender-selection input {
+    margin-right: 5px;
+}
+
+
+
+/* ========== my-profile.html Page Styling ========== */
+.profile-container {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    width: 100%;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+.profile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Profile Box */
+.profile-box {
+    background: var(--primary-button-color); /* Light gray */
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 1rem 0;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+
+.profile-info {
+    font-size: 18px;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    text-align: left;
+    color: var(--primary-text-color);
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border: none;
+    border-radius: 50%;
+}
+
+.edit-profile-btn {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    background-color: #8ED8BF;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1.5);
+    width: 30px;
+    height: 30px;
+}
+
+/* Center align the button container */
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    max-width: 400px; /* Ensures buttons match profile box width */
+}
+
+/* Buttons - Aligned to Profile Box */
+.support-btn, .order-history-btn, .menu-btn, .log-out-btn, .log-in-btn {
+    width: 100%; /* Matches profile box width */
+    max-width: 400px;
+    background: var(--primary-button-color);
+    color: var(--primary-text-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.d-none {
+    display: none;
+}
+
+
+
+/* ========== edit-profile.html Page ========== */
+
+
+.edit-profile-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.edit-profile-container {
+    background: #d3d3d3; /* Light gray */
+    font-family: var(--primary-text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.edit-profile-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+.edit-profile-form label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.edit-profile-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+/* Save Button */
+.save-btn {
+    width: 100%;
+    background: #353131;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --------FIND US---------- */
+
+.wrapper-find-us {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.white-arrow {
+    color: var(--primary-text-color);
+}
+
+.find-us-title {
+    text-align: center;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 25rem;
+    border-radius: 5px;
+    /* background-color: var(--primary-bg-color); */
+    margin-top: 3rem;
+}
+
+.adress-container {
+    margin-top: 2rem;
+}
+
+.sub-title-find-us {
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin-top: 1rem;
+}
+
+.adress-list a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+
+/*---------- Landing Page ------------*/
+
+
+
+.landing-page {
+    background-color: #8ED8BF; /* Light green background */
+    background-image: url("assets/leaves-bg.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; /* Ensures the pattern repeats */
+    font-family: var(--primary-font);
+    padding: 1.5rem;
+}
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    margin: auto;
+}
+.slide-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+.slide:first-child {
+    display: block;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+.landing-page-title {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: var(--primary-bg-color);
+    text-align: center;
+}
+.landing-text-content {
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    text-align: justify;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+
+
+
+/*===========vår meny button===========*/
+/*
+.menu-button {
+    display: block;
+    width: 100%px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    background-color: var(--primary-button-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color:var(--button-hover);
+}
+
+/* -------ORDERHISTORIK------- */
+
+.wrapper-order-history {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    background-image: url(./assets/leaves-bg.png);
+    background-position: center;
+}
+
+.order-h-container {
+    width: 100%;
+    height: auto;
+    background-color: rgba(96, 88, 88, 1);
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+
+.order-h-header {
+    color: var(--primary-text-color);
+    text-align: center;
+    font-family: var(--primary-font);
+    padding: 2rem 0 2rem 0;
+    border-bottom: dotted var(--primary-button-color) 2px;
+}
+
+.order-h-title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.order-h-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-button-color);
+    align-items: center;
+    border-bottom: dotted var(--primary-button-color) 2px;
+    color: var(--primary-text-color);
+}
+
+.order-nmbr {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.order-date {
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+.order-details {
+    width: 90%;
+    transform: translateX(25px);
+    display: none;
+    background-color: var(--secondary-text-color);
+    padding: 1rem;
+    color: var(--primary-text-color);
+    font-family: var(--primary-font);
+    border-bottom: dotted var(--primary-button-color) 2px;
+}
+
+.order-more-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 0 .5rem 0;
+}
+
+.cart-order {
+    padding: 10px;
+    padding-left: 15px;
+    border-left: var(--secondary-bg-color) 1px solid;
+}
+
+.order-h-total {
+    width: 350px;
+    transform: translateX(-25px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-text-color);
+    color: var(--primary-button-color);
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+}
+
+.order-h-moms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-h-btn-container {
+    display: flex; 
+    justify-content: center;
+    margin-top: auto;
+}
+
+.order-h-btn {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    color: var(--primary-text-color);
+    background-color: var(--primary-button-color);
+    border: none;
+    border-radius: 4px;
+    height: 5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+

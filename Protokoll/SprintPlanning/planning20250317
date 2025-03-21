@@ -1,0 +1,17 @@
+Mötesprotokoll (2025-03-17)
+
+Närvarande
+Saga
+Thapa
+Sunsanee
+
+Protokoll:
+Inför sprint två har vi inte jättemånga user stories kvar och det kommer gå lättare att planera nu när vi 
+har en bättre överblick på uppgiften och det vi har gjort hittils. Vi började med att gå igenom våra kvarstående
+user stories och diskuterade vad som behövdes göras av varje. Vi ska göra en sida som heter Här finns vi. 
+Man tar sig dit via navigeringsmenyn. I den har vi tänkt att det ska finnas en karta med adresser där foodtruckarna
+befinner sig under kartan i en lista?. Så om man klickar på en adress visas den på kartan. 
+Vi ska även göra landningssidan som ska innehålla bilder på maten, och erbjudanden? och en knapp som leder till menyn, så att man inte kommer direkt till meny-sidan. 
+Vi ska fixa så att sidan blir mer tillgänglighetsanpassad med kanske en knapp där man kan få text uppläst?
+Orderhistorik ska vi också fixa, så att man som användare kan se sina tidigare beställningar på en egen sida som man kommer till genom min profil.
+Tillsist ska vi även fixa en sida för administratörer där alla beställningarna listas i tidsordning, ungefär som highscorelistan i pokemon-uppgiften. Vi vet inte riktigt hur vi ska göra detta än men hoppas att vi kan lösa det ändå.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga In</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/script.js"></script>
+</head>
+
+<body>
+    <section class="log-in-page" id="logInPage">
+        <div class="login-container">
+            <header>
+                <i class="fa-solid fa-arrow-left back-arrow"></i>
+                <img src="./assets/logo.png" alt="logo">
+            </header>
+            <h1 class="title">LOG-IN</h1>
+
+            <form class="login-form">
+                <!-- Username Field -->
+                <label for="username">E-mail or Mobile Number:</label>
+                <input type="text" id="username" name="username" required autocomplete="off" placeholder="tomte@gmail.com eller 073-123 45 67">
+
+                <!-- Password Field -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="off" placeholder="******">
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">LOG IN</button>
+            </form>
+
+            <!-- Forgot Password Section -->
+            <p class="forgot-text">Forgot password?</p>
+            
+
+            <!-- Register Section -->
+            <button type="button" class="register-btn">BLI KUND</button>
+        </div>
+    </section>
+</body>
+
+</html>

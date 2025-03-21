@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECEIPT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="receipt-container">
+
+        <header class="profile-header">
+            <img src="assets/yygs.png" alt="YYGS Logo" class="header-logo">
+            <i class="fa-solid fa-bars"></i>
+        </header>
+
+        <section class="receipt-box">
+            <img src="assets/logo.png" alt="YYGS" class="receipt-logo">
+            <h1 class="receipt-title">KVITTO</h1>
+            <p class="order-number" id="confirmationNmbr"></p>
+
+            <ul class="order-list">
+                
+            </ul>
+
+            <div class="total">
+                <div class="total-left">
+                    <strong>TOTALT:</strong>
+                    <small>inkl moms</small>
+                </div>
+                <div class="total-right">
+                    <span class="order-summary-span"></span>
+                </div>
+            </div>
+        </section>
+        <div class="navigation-meny" id="navigationMenu">
+            <img class="close-nav" id="closeMenu" src="./assets/icon/cross.svg" alt="Close navigation-menu">
+            <ul class="nav-links" id="navLinks">
+                <a href="our-menu.html">MENY</a>
+                <a href="my-profile.html">MIN PROFIL</a>
+                <a class="log-in" href="log-in.html">LOGGA IN</a>
+                <a href="find-us.html">HÄR FINNS VI</a>
+                <a href="about-us.html">ABOUT US</a>
+            </ul>
+        </div>
+
+        <button class="normal-btn receipt-btn new-order-btn">GÖR EN NY BESTÄLLNING</button>
+    </div>
+</body>
+
+</html>

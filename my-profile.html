@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Header -->
+        <header class="profile-header">
+            <img src="assets/yygs.png" alt="YYGS Logo" class="header-logo">
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-box">
+            <div class="profile-pic-container">
+                <img id="profileImage" src="./assets/default.png" alt="User Profile" class="profile-pic">
+                <button class="edit-profile-btn" title="Edit Profile">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </div>
+            <div class="profile-info-container">
+                <h2 class="profile-title">MIN PROFIL</h2>
+                <p class="profile-info"><strong>NAMN :</strong> <span id="profileName">Laddar...</span></p>
+                <p class="profile-info"><strong>E-MAIL :</strong> <span id="profileEmail">Laddar...</span></p>
+                <p class="profile-info"><strong>MOBIL NUMMER :</strong> <span id="profileMobile">Laddar...</span></p>
+                
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <div class="profile-buttons">
+            <button class="support-btn"><i class="fa-solid fa-paper-plane"></i> KONTAKTA OSS</button>
+            <button class="order-history-btn">ORDER HISTORIK</button>
+            <button class="menu-btn">VÅR MENY</button>
+            <button id="logOutBtn" class="log-out-btn d-none">LOGGA UT</button>
+            <button id="logInBtn" class="log-in-btn d-none">LOGGA IN </button>
+        </div>
+    </div>
+</body>
+
+</html>

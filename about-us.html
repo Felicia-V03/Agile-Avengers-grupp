@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="about-container">
+
+        <section class="about-box">
+            <img src="assets/logo.png" alt="YYGS" class="about-logo">
+            <h1 class="about-title">OM OSS</h1>
+            <!-- Slideshow container -->
+            <section class="slide-viewer">
+                <div class="slide-group">
+                    <figure class="slide slide-1 fade">
+                        <img src="./assets/images/sum-chef.png" alt="Wonton" class="offer-items__img" />
+
+                    </figure>
+                    <figure class="slide slide-2 fade">
+                        <img src="./assets/images/jimmy-chef.png" alt="Burger" class="offer-items__img" />
+                    </figure>
+                    <figure class="slide slide-3 fade">
+                        <img src="./assets/images/personal.png" alt="Japanise-food" class="offer-items__img" />
+                    </figure>
+                    <figure class="slide slide-4 fade">
+                        <img src="./assets/images/staff.png" alt="hamburger" class="offer-items__img" />
+                    </figure>
+                    <figure class="slide slide-5 fade">
+                        <img src="./assets/images/produkt-burger.png" alt="sandwiches" class="offer-items__img" />
+                    </figure>
+                    <figure class="slide slide-6 fade">
+                        <img src="./assets/images/matvagn.png" alt="food-truck" class="offer-items__img" />
+                    </figure>
+
+                </div>
+                <br>
+            </section>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+
+            <!-- Hidden Checkbox -->
+            <input type="checkbox" id="readMoreToggle" class="toggle">
+
+            <p class="about-text">
+                "Välkommen till Yum Yum Gimmie Sum, där vi har kombinerat två av våra största passioner: saftiga burgare
+                och smakrika wontons. Hur går det ihop, undrar du kanske?
+                <span id="dots">...</span>
+            </p>
+
+            <!-- Hidden Content -->
+            <div class="more-text">
+                <p class="about-text">
+                    Jo, det är en lång historia som började med en gemensam kärlek till god mat och en önskan att skapa
+                    något unikt.
+                    Vi, Jimmy och Sum, har alltid älskat att experimentera i köket. Sum har en bakgrund i det asiatiska
+                    köket och en förkärlek för handgjorda wontons fyllda med de mest utsökta smaker.
+                </p>
+                <p class="about-text">
+                    Jimmy å andra sidan, är en burgarexpert med en förmåga att skapa den perfekta burgaren med de bästa
+                    råvarorna
+                    och en touch av kreativitet. En dag, under en matlagningssession, insåg vi att dessa två världar
+                    inte bara kunde
+                    samexistera, utan komplettera varandra på ett fantastiskt sätt.
+                </p>
+            </div>
+
+            <!-- Read More / Read Less Button -->
+            <label for="readMoreToggle" class="toggle-btn"></label>
+        </section>
+
+
+
+
+        <!-- Contact Us Section -->
+        <section class="contact-us">
+            <h2 class="contact-title">Kontakta Oss</h2>
+            <div class="contact-details">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:mail@yygm.se">mail@yygm.se</a>
+                <i class="fa-solid fa-phone"></i>
+                <span>071-111 22 33</span>
+            </div>
+
+        </section>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="./assets/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="./assets/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <img src="./assets/tiktok.png" alt="TikTok">
+            </a>
+        </div>
+
+        <button class="normal-btn return-btn about-btn">Välkommen till YYGS</button>
+    </div>
+</body>
+
+</html>

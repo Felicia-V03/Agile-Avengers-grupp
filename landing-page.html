@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f300007e95.js" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/script.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <section class="landing-page" id="menuPage">
+            <section class="menu-header">
+                <img src="./assets/logo.png" alt="logo">
+                <i class="fa-solid fa-bars"></i>
+            </section>
+    </header>
+    <!-- Slideshow container -->
+    <section class="slide-viewer">
+        <div class="slide-group">
+            <figure class="slide slide-1 fade">
+                <img src="./assets/images/wonton.png" alt="Wonton" class="offer-items__img" />
+
+            </figure>
+            <figure class="slide slide-2 fade">
+                <img src="./assets/images/burger-3.png" alt="Burger" class="offer-items__img" />
+            </figure>
+            <figure class="slide slide-3 fade">
+                <img src="./assets/images/japanise-food.jpg" alt="Japanise-food" class="offer-items__img" />
+            </figure>
+            <figure class="slide slide-4 fade">
+                <img src="./assets/images/fried-wonton.png" alt="hamburger" class="offer-items__img" />
+            </figure>
+            <figure class="slide slide-5 fade">
+                <img src="./assets/images/sandwiches.jpg" alt="sandwiches" class="offer-items__img" />
+            </figure>
+            <!--                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+-->
+        </div>
+        <br>
+    </section>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <section>
+        <div class="content-wrapper center">
+            <h1 class="landing-page-title">Välkommen till</h1>
+            <h1 class="landing-page-title">Yum Yum Gimmei Sum!</h1>
+            <section class="landing-card" id="landingContainer">
+                <h3 class="landing-text-content">
+                    "Ett smakäventyr på hjul! Hos Yum Yum Gimmie Sum hittar du en spännande mix av favoriter – från
+                    saftiga burgare till fräscha Wonton. Vi har något för alla smaklökar. Följ med på en kulinarisk
+                    resa!"
+                    <a href="our-menu.html" class="menu-btn">KOLLA VÅR ERBJUDANDE !</a>
+                </h3>
+
+            </section>
+        </div>
+    </section>
+
+    <div class="navigation-meny" id="navigationMenu">
+        <img class="close-nav" id="closeMenu" src="./assets/icon/cross.svg" alt="Close navigation-menu">
+        <ul class="nav-links" id="navLinks">
+            <a href="our-menu.html">MENY</a>
+            <a href="my-profile.html">MIN PROFIL</a>
+            <a href="log-in.html">LOGGA IN</a>
+            <a href="find-us.html">HÄR FINNS VI</a>
+            <a href="about-us.html">ABOUT US</a>
+        </ul>
+    </div>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="./assets/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="./assets/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+            <img src="./assets/tiktok.png" alt="TikTok">
+        </a>
+    </div>
+    <div class="contact-details">
+        <i class="fa-solid fa-phone"></i>
+        <span>071-111 22 33</span>
+    </div>
+    <div class="contact-details find-us-btn">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>HÄR FINNS VI</span>
+    </div>
+</body>
+
+</html>
