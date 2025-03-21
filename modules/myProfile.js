@@ -25,6 +25,11 @@ export function manageProfilePage() {
         
             if (currentUser.role === "admin") {
                 console.log("User is an admin");
+                document.querySelector(".support-btn").classList.add("d-none");
+                document.querySelector(".menu-btn").classList.add("d-none");
+                document.querySelector(".edit-profile-btn").classList.add("d-none");
+                document.querySelector(".order-history-btn").textContent = "BESTÄLLNINGAR";
+                document.querySelector(".cart-order").classList.add("d-none");
                                 
             } else {
                 console.log("User is not an admin");
