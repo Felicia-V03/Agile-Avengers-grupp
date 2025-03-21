@@ -1,14 +1,13 @@
 export function registerUser() {
     document.addEventListener("DOMContentLoaded", function () {
-        // Get input fields and buttons
+        
         const nameInput = document.getElementById("name");
         const emailInput = document.getElementById("email");
         const mobileInput = document.getElementById("mobile");
         const passwordInput = document.getElementById("password");
         const registerBtn = document.querySelector(".register-btn");
-        const backArrow = document.querySelector(".back-arrow"); // ✅ Select the back arrow
+        const backArrow = document.querySelector(".back-arrow");
 
-        // ✅ Add event listener to the back arrow
         if (backArrow) {
             backArrow.addEventListener("click", function () {
                 window.location.href = "log-in.html";
@@ -31,9 +30,8 @@ export function registerUser() {
             if (error && error.classList.contains("error-text")) error.remove();
         }
 
-        // 📌 Mobile number auto-formatting: XXX XXX XX XX
         mobileInput.addEventListener("input", function () {
-            let value = mobileInput.value.replace(/\D/g, ""); // Remove all non-digit characters
+            let value = mobileInput.value.replace(/\D/g, ""); 
 
             if (value.length > 3 && value.length <= 6) {
                 value = value.replace(/(\d{3})(\d{0,3})/, "$1 $2");
@@ -43,7 +41,7 @@ export function registerUser() {
                 value = value.replace(/(\d{3})(\d{3})(\d{2})(\d{0,2})/, "$1 $2 $3 $4");
             }
 
-            mobileInput.value = value; // Set the formatted value
+            mobileInput.value = value; 
         });
 
         registerBtn.addEventListener("click", function (event) {
@@ -64,7 +62,7 @@ export function registerUser() {
                 clearError(emailInput);
             }
 
-            let mobileNumber = mobileInput.value.replace(/\D/g, ""); // Remove spaces for validation
+            let mobileNumber = mobileInput.value.replace(/\D/g, ""); 
             if (!/^\d{10}$/.test(mobileNumber)) {
                 showError(mobileInput, "Enter a valid 10-digit number");
                 isValid = false;
@@ -95,13 +93,11 @@ export function registerUser() {
                 users.push(newUser);
                 localStorage.setItem("users", JSON.stringify(users));
 
-                // ✅ Clear input fields before redirecting
                 nameInput.value = "";
                 emailInput.value = "";
                 mobileInput.value = "";
                 passwordInput.value = "";
 
-                // ✅ Redirect to login page
                 window.location.href = "log-in.html";
             }
         });

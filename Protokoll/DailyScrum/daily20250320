@@ -1,0 +1,40 @@
+Mötesprotokoll (2025-03-20)
+
+Närvarande
+* Saga
+* Felicia
+* Thapa
+* Sunsanee
+
+Protokoll
+* Vad gjorde du igår?
+* Vad ska du göra idag?
+* Finns det några hinder?
+
+Saga
+
+* Fixade så att innehållet på kvittot skrivs ut på korrekt sätt. Gjorde även så att ordrarna skrivs ut på orderhistorik från localstorage.
+* Fixa så att man kan logga ut, och därmed också gömma logga ut med d-none och byta ut mot logga in (under min profil). Samma i navigationsmenyn. Lägga till funktion på kundvagnsknapp i orderhistorik.
+* Vi har haft problem med d-none för logga in och ut så ska se om det går att lösa.
+
+Felicia
+
+* Färdigställde orderhistoriken i localstorage. Började även med backend för administratör-user storyn. Fixade även så att det inte går att klicka på knappen i kundvagnen om den är tom.
+* Fortsätta med administratör-user storyn.
+* Inga problem just nu.
+
+Thapa
+
+* Fixade mycket smådetaljer i koden och rensade och städade upp lite. 
+* Ska kolla igenom allt vårat material och rensa upp. Ska även göra en karta över våran vs-code med alla mappar och filer. 
+* Inga hinder just nu.
+
+Sunsanee
+
+* Stylade om i innehållet på kvittot så det blev mer symmetriskt och snyggare. Justerade och uträkningen på kvittot så att moms är inräknat.
+* Fixa stylingen på orderhistorik, liknande som på kvittot så att det blir mer symmetriskt. Ska även fixa lite style på min profil då tex email hamnar på två rader om den är lång.
+* Inga hinder.
+
+
+Övrigt
+Vi kommer nog inte bli klara med allt tills inlämningen, men vi tycker att vi har fått med det viktigaste för att appen ska fungera för användarna. Vi tycker också att våran applikation är tillgänglighetsanpassad då det är lätt att navigera sig genom den och det är tydlig och lättläst text. Men vi fortsätter jobba på med våra tilldelade uppgifter. Om någon fastnar skriver vi på discord och ses på teams så vi kan hjälpas åt. 
