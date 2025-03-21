@@ -20,16 +20,14 @@ export function loginUser() {
                 console.log(userInfo);
             }
 
-            // Get input fields and buttons
             const username = document.getElementById("username");
             const password = document.getElementById("password");
             const forgotPassword = document.getElementById("forgot-password");
             const loginBtn = document.querySelector(".login-btn");
             const verifyBtn = document.querySelector(".verify-btn");
             const registerBtn = document.querySelector(".register-btn");
-            const backArrow = document.querySelector(".back-arrow"); // ✅ Get the back arrow
+            const backArrow = document.querySelector(".back-arrow"); 
 
-            // ✅ Add event listener to the back arrow
             if (backArrow) {
                 backArrow.addEventListener("click", function () {
                     window.location.href = "our-menu.html";
@@ -54,7 +52,6 @@ export function loginUser() {
                 if (error && error.classList.contains("error-text")) error.remove();
             }
 
-            // 📌 Allow both text (email) and numbers (phone) in the input fields
             username.addEventListener("input", function () {
                 let value = username.value.trim();
                 if (value.includes("@") || isNaN(value)) {
@@ -64,13 +61,11 @@ export function loginUser() {
                 }
             });
 
-            // 📌 Format function for mobile numbers (only if it's a number)
             function formatMobileNumber(value) {
-                let numericValue = value.replace(/\D/g, ""); // Remove non-numeric characters
+                let numericValue = value.replace(/\D/g, "");
                 return numericValue.length > 6 ? numericValue.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4") : numericValue;
             }
 
-            // 📌 Log in button: Check fields and go to "my-profile.html"
             loginBtn.addEventListener("click", function (event) {
                 event.preventDefault();
                 let isValid = true;
@@ -97,10 +92,8 @@ export function loginUser() {
                     );
 
                     if (userFound) {
-                        // ✅ Save the logged-in user
                         localStorage.setItem("currentUser", JSON.stringify(userFound));
 
-                        // ✅ Redirect to profile page
                         window.location.href = "my-profile.html";
                     } else {
                         showError(username, "Invalid login credentials");
