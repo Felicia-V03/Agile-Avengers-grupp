@@ -20,7 +20,6 @@ export function loginUser() {
                 console.log(userInfo);
             }
 
-
             // Get input fields and buttons
             const username = document.getElementById("username");
             const password = document.getElementById("password");
@@ -93,7 +92,7 @@ export function loginUser() {
                 if (isValid) {
                     let users = JSON.parse(localStorage.getItem("users")) || [];
                     let userFound = users.find(
-                        user => (user.email === username.value.trim() || user.mobile === username.value.trim()) &&
+                        user => (user.username === username.value.trim() || user.mobile === username.value.trim()) &&
                                  user.password === password.value.trim()
                     );
 

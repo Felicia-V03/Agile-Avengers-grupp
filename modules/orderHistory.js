@@ -17,7 +17,6 @@ export function showOrderDetails() {
     });
 }
 
-
 export function showOrderHistory() {
     document.addEventListener('DOMContentLoaded', () => {
         const orderContainer = document.querySelector('.order-h-items');
@@ -130,6 +129,17 @@ export function showOrderHistory() {
             cartIcon.addEventListener('click', () => {
                 addOrderToCart(order.items);
             });
+
+            if (currentUser) {
+                if (currentUser.role === "admin") {
+                    console.log("User is an admin");
+                    document.querySelector(".cart-order").classList.add("d-none");
+     
+                } else {
+                    console.log("User is not an admin");
+
+                }
+            }
         });
     });
 }

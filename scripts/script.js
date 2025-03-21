@@ -69,7 +69,6 @@ if(window.location.pathname === '/' || window.location.pathname === '/Index.html
     newOrderBtn();
     getLatestOrder();
 
-
 } else if(window.location.pathname === '/find-us.html') {
     console.log('find-us.html');
     document.addEventListener('DOMContentLoaded', () => {
